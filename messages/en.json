@@ -1,0 +1,679 @@
+{
+  "Meta": {
+    "title": "SAVAN — Intelligent Business Systems",
+    "homeTitle": "SAVAN — Intelligent Business Systems",
+    "description": "Turn more opportunities into customers with intelligent lead conversion systems."
+  },
+  "Common": {
+    "required": "required",
+    "optional": "optional",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Saved.",
+    "cancel": "Cancel",
+    "loading": "Loading…",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "notSet": "Not set",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {page} of {total}",
+    "actions": "Actions"
+  },
+  "Languages": {
+    "en": "English",
+    "fr": "French"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "unsavedChanges": "You have unsaved changes. Change language anyway? Unsaved input will be lost."
+  },
+  "Nav": {
+    "pricing": "Pricing",
+    "industries": "Industries",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "signIn": "Sign in",
+    "signUp": "Get started",
+    "openApp": "Open the app",
+    "mainNav": "Main navigation",
+    "skipToContent": "Skip to content"
+  },
+  "Footer": {
+    "tagline": "Intelligent business systems to turn more opportunities into customers.",
+    "product": "Product",
+    "productNav": "Product links",
+    "company": "Company",
+    "language": "Language",
+    "copyright": "© {year} SAVAN"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Intelligent Business Systems",
+      "title": "Turn more opportunities into customers with intelligent lead conversion systems.",
+      "subtitle": "SAVAN brings your leads, conversations, appointments and follow-ups together, with an AI assistant that writes in your prospect's language — in English or French.",
+      "primaryCta": "Create your account",
+      "secondaryCta": "Talk to us"
+    },
+    "benefits": {
+      "title": "Everything you need to follow up every lead",
+      "respond": {
+        "title": "Reply faster",
+        "text": "Get AI-suggested replies in the language of each conversation, ready for you to review and send."
+      },
+      "organize": {
+        "title": "Keep every lead organized",
+        "text": "Track each lead from first contact to signed deal in a clear pipeline."
+      },
+      "follow": {
+        "title": "Never forget a follow-up",
+        "text": "Automations prepare follow-ups and appointment messages for you. Nothing is sent without your approval."
+      },
+      "measure": {
+        "title": "See what works",
+        "text": "Follow conversion by stage and by source to focus on the channels that bring you customers."
+      }
+    },
+    "how": {
+      "title": "How it works",
+      "capture": {
+        "title": "Capture",
+        "text": "Add leads from your website, phone calls, referrals or ads."
+      },
+      "engage": {
+        "title": "Engage",
+        "text": "Keep every conversation in one place, in its original language, with translation on request."
+      },
+      "convert": {
+        "title": "Convert",
+        "text": "Book appointments, follow up at the right time and move leads to won."
+      }
+    },
+    "cta": {
+      "title": "Ready to convert more of your leads?",
+      "text": "Set up your workspace in a few minutes, in English or French.",
+      "primary": "Get started",
+      "secondary": "See industries"
+    }
+  },
+  "Pricing": {
+    "title": "Pricing",
+    "subtitle": "Simple monthly plans. Cancel anytime from your account.",
+    "perMonth": "/ month",
+    "taxNote": "Excluding applicable taxes.",
+    "recommended": "Recommended",
+    "choose": "Choose {plan}",
+    "questions": "Questions about plans? <link>Contact us</link>.",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "For independent professionals getting organized.",
+        "features": {
+          "f1": "Lead management and pipeline",
+          "f2": "Appointments",
+          "f3": "Bilingual message templates",
+          "f4": "Email support"
+        }
+      },
+      "growth": {
+        "name": "Growth",
+        "description": "For teams that want to automate their follow-ups.",
+        "features": {
+          "f1": "Everything in Starter",
+          "f2": "Automations with approval",
+          "f3": "AI assistant: replies, summaries, translation",
+          "f4": "Analytics by stage and source"
+        }
+      }
+    }
+  },
+  "Industries": {
+    "title": "Industries",
+    "subtitle": "SAVAN fits businesses that win customers through conversations and appointments.",
+    "items": {
+      "homeServices": {
+        "title": "Home services",
+        "text": "Answer quote requests quickly and book site visits."
+      },
+      "realEstate": {
+        "title": "Real estate",
+        "text": "Follow up with buyers and sellers and organize viewings."
+      },
+      "wellness": {
+        "title": "Wellness and personal services",
+        "text": "Turn enquiries into booked sessions."
+      },
+      "professionalServices": {
+        "title": "Professional services",
+        "text": "Qualify prospects and book discovery calls for your firm."
+      },
+      "education": {
+        "title": "Training and education",
+        "text": "Follow up with prospective learners until they enroll."
+      },
+      "agencies": {
+        "title": "Marketing agencies",
+        "text": "Manage your agency's own leads and track conversion by channel."
+      }
+    },
+    "cta": "Tell us about your business"
+  },
+  "Faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "What you need to know before getting started.",
+    "items": {
+      "what": {
+        "question": "What is SAVAN?",
+        "answer": "SAVAN is a web application that helps businesses manage leads, conversations, appointments and follow-ups in one place, with an AI assistant for writing and summarizing."
+      },
+      "who": {
+        "question": "Who is SAVAN for?",
+        "answer": "Small and medium-sized businesses that win customers through enquiries, quotes and appointments."
+      },
+      "languages": {
+        "question": "Which languages are supported?",
+        "answer": "SAVAN is fully available in English and French. Your team can use the interface in one language while writing to prospects in another."
+      },
+      "aiSending": {
+        "question": "Does the AI send messages on its own?",
+        "answer": "No. AI suggestions and automated messages are drafts. They are only marked as sent after a member of your team approves them."
+      },
+      "data": {
+        "question": "Who can see my data?",
+        "answer": "Each workspace is isolated: only its members can access its leads and conversations. Prospect details are stored exactly as entered and are never translated automatically."
+      },
+      "billing": {
+        "question": "How does billing work?",
+        "answer": "Plans are billed monthly. Payments are processed by Stripe."
+      },
+      "cancel": {
+        "question": "Can I cancel at any time?",
+        "answer": "Yes. You can cancel from the Subscription page of your account. Your plan stays active until the end of the current billing period."
+      },
+      "integrations": {
+        "question": "Does SAVAN connect to my email or calendar?",
+        "answer": "Not yet. Integrations are in development. Today, you record messages in SAVAN and send them from your usual tools."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Contact us",
+    "subtitle": "Questions about SAVAN? Send us a message and we will reply by email.",
+    "form": {
+      "fullName": "Full name",
+      "email": "Email",
+      "company": "Company",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you, your message has been sent. We will reply by email.",
+      "dataNotice": "We use these details only to answer your message."
+    }
+  },
+  "Validation": {
+    "required": "This field is required.",
+    "invalidEmail": "Enter a valid email address.",
+    "tooLong": "This value is too long.",
+    "tooShort": "This value is too short.",
+    "passwordTooShort": "Use at least 8 characters.",
+    "invalidNumber": "Enter a valid amount, for example 1500.50.",
+    "invalidDate": "Enter a valid date and time.",
+    "invalidChoice": "Choose a valid option."
+  },
+  "Errors": {
+    "generic": "Something went wrong. Please try again.",
+    "invalidCredentials": "Incorrect email or password.",
+    "emailInUse": "An account already exists with this email.",
+    "rateLimited": "Too many attempts. Please wait a moment and try again.",
+    "automationMissingTranslations": "This template is missing a language version. Add every version before activating.",
+    "aiNotConfigured": "AI features are not configured yet (missing API key).",
+    "aiFailed": "The AI could not generate a response. Please try again.",
+    "aiRefused": "The AI declined this request.",
+    "stripeNotConfigured": "Payments are not configured yet.",
+    "forbidden": "You don't have permission to do this."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for doesn't exist or has moved.",
+    "home": "Back to home"
+  },
+  "Auth": {
+    "signInTitle": "Sign in",
+    "signInSubtitle": "Welcome back to SAVAN.",
+    "signUpTitle": "Create your account",
+    "signUpSubtitle": "Start organizing your leads in a few minutes.",
+    "fullName": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 8 characters.",
+    "signIn": "Sign in",
+    "signingIn": "Signing in…",
+    "signUp": "Create account",
+    "signingUp": "Creating account…",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already have an account?",
+    "checkEmail": "Check your inbox: we sent you a link to confirm your email address."
+  },
+  "Onboarding": {
+    "title": "Set up your workspace",
+    "subtitle": "Tell us about your business. You can change these settings later.",
+    "submit": "Create workspace",
+    "submitting": "Creating…"
+  },
+  "WorkspaceFields": {
+    "name": "Business name",
+    "commLocales": "Languages you use with leads",
+    "commLocalesHelp": "Each message template needs a version in every language selected here.",
+    "defaultCommLocale": "Default communication language",
+    "defaultCommLocaleHelp": "Used when a lead's language is unknown. Must be one of the languages above.",
+    "timezone": "Time zone",
+    "timezoneHelp": "Appointments and dates are shown in this time zone.",
+    "currency": "Currency",
+    "currencyHelp": "Used for lead values. It does not depend on the language."
+  },
+  "AppNav": {
+    "label": "Application",
+    "overview": "Overview",
+    "leads": "Leads",
+    "pipeline": "Pipeline",
+    "appointments": "Appointments",
+    "conversations": "Conversations",
+    "automations": "Automations",
+    "analytics": "Analytics",
+    "integrations": "Integrations",
+    "settings": "Settings",
+    "billing": "Subscription"
+  },
+  "AppShell": {
+    "interfaceLanguage": "Interface language",
+    "signOut": "Sign out",
+    "openMenu": "Menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content"
+  },
+  "LeadStatus": {
+    "new": "New Lead",
+    "contacted": "Contacted",
+    "qualified": "Qualified",
+    "appointment_booked": "Appointment Booked",
+    "won": "Won",
+    "lost": "Lost"
+  },
+  "LeadSource": {
+    "website": "Website",
+    "referral": "Referral",
+    "ads": "Advertising",
+    "social": "Social media",
+    "phone": "Phone",
+    "email": "Email",
+    "other": "Other"
+  },
+  "Channel": {
+    "email": "Email",
+    "sms": "SMS",
+    "whatsapp": "WhatsApp",
+    "web_chat": "Website chat",
+    "phone": "Phone"
+  },
+  "MessageStatus": {
+    "received": "Received",
+    "draft": "Draft",
+    "pending_approval": "Awaiting approval",
+    "approved": "Approved",
+    "sent": "Sent"
+  },
+  "AppointmentStatus": {
+    "scheduled": "Scheduled",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "no_show": "No-show"
+  },
+  "TemplateKind": {
+    "initial_contact": "Initial contact",
+    "follow_up": "Follow-up",
+    "appointment_confirmation": "Appointment confirmation",
+    "appointment_reminder": "Appointment reminder",
+    "rescheduling": "Rescheduling",
+    "reactivation": "Reactivation",
+    "internal_notification": "Internal notification"
+  },
+  "AutomationTrigger": {
+    "lead_created": "When a lead is added",
+    "lead_status_changed": "When a lead changes stage",
+    "appointment_booked": "When an appointment is booked"
+  },
+  "Overview": {
+    "title": "Overview",
+    "subtitle": "Your pipeline at a glance.",
+    "metrics": {
+      "totalLeads": "Total leads",
+      "newThisWeek": "New in the last 7 days",
+      "conversionRate": "Conversion rate",
+      "conversionHelp": "Won leads divided by closed leads (won + lost).",
+      "upcomingAppointments": "Upcoming appointments",
+      "pendingApprovals": "Messages awaiting approval",
+      "pipelineValue": "Open pipeline value"
+    },
+    "recentLeads": "Recent leads",
+    "viewAll": "View all leads",
+    "upcoming": "Next appointments",
+    "noUpcoming": "No upcoming appointments.",
+    "noLeadsTitle": "No leads yet",
+    "noLeadsText": "Add your first lead to start tracking your pipeline.",
+    "addLead": "Add a lead",
+    "reviewApprovals": "Review messages"
+  },
+  "Leads": {
+    "title": "Leads",
+    "subtitle": "Everyone who showed interest in your business.",
+    "add": "Add a lead",
+    "search": "Search",
+    "searchPlaceholder": "Name, email or company",
+    "status": "Status",
+    "source": "Source",
+    "allStatuses": "All statuses",
+    "allSources": "All sources",
+    "apply": "Apply filters",
+    "clearFilters": "Clear filters",
+    "results": "{count, plural, =0 {No leads} one {# lead} other {# leads}}",
+    "columns": {
+      "name": "Name",
+      "company": "Company",
+      "contact": "Contact",
+      "status": "Status",
+      "source": "Source",
+      "language": "Language",
+      "value": "Value",
+      "created": "Added"
+    },
+    "emptyTitle": "No leads yet",
+    "emptyText": "Add your first lead to start tracking your pipeline.",
+    "emptyFiltered": "No leads match these filters.",
+    "newTitle": "Add a lead",
+    "newSubtitle": "Contact details are saved exactly as entered.",
+    "form": {
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "source": "Source",
+      "status": "Stage",
+      "preferredLocale": "Preferred language",
+      "preferredLocaleHelp": "Used for automated messages and AI replies to this lead.",
+      "unknownLanguage": "Unknown (use the workspace default)",
+      "value": "Estimated value ({currency})",
+      "valueHelp": "Optional. Example: 1500.50",
+      "notes": "Notes",
+      "create": "Create lead",
+      "save": "Save changes",
+      "saving": "Saving…",
+      "saved": "Lead saved."
+    },
+    "detail": {
+      "back": "Back to leads",
+      "created": "Lead created.",
+      "edit": "Edit lead",
+      "delete": "Delete lead",
+      "deleteConfirm": "Delete this lead and all its conversations? This cannot be undone.",
+      "conversations": "Conversations",
+      "noConversations": "No conversations yet.",
+      "appointments": "Appointments",
+      "noAppointments": "No appointments yet.",
+      "bookAppointment": "Book an appointment",
+      "messagesCount": "{count, plural, =0 {No messages} one {# message} other {# messages}}"
+    }
+  },
+  "Pipeline": {
+    "title": "Pipeline",
+    "subtitle": "Move leads from one stage to the next.",
+    "moveLabel": "Stage of {name}",
+    "move": "Move",
+    "emptyColumn": "No leads",
+    "count": "{count, plural, one {# lead} other {# leads}}"
+  },
+  "Appointments": {
+    "title": "Appointments",
+    "subtitle": "Meetings booked with your leads.",
+    "book": "Book an appointment",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "emptyUpcoming": "No upcoming appointments.",
+    "emptyPast": "No past appointments.",
+    "timeZoneNote": "Times are shown in the business time zone ({timeZone}).",
+    "columns": {
+      "when": "Date",
+      "lead": "Lead",
+      "duration": "Duration",
+      "location": "Location",
+      "status": "Status"
+    },
+    "minutes": "{minutes, plural, one {# minute} other {# minutes}}",
+    "statusLabel": "Status of the appointment with {name}",
+    "update": "Update",
+    "form": {
+      "lead": "Lead",
+      "selectLead": "Select a lead",
+      "startsAt": "Date and time",
+      "startsAtHelp": "In the business time zone ({timeZone}).",
+      "duration": "Duration (minutes)",
+      "location": "Location or meeting link",
+      "notes": "Notes",
+      "submit": "Book appointment",
+      "submitting": "Booking…",
+      "booked": "Appointment booked.",
+      "noLeads": "Add a lead before booking an appointment."
+    }
+  },
+  "Conversations": {
+    "title": "Conversations",
+    "subtitle": "Messages exchanged with your leads, in their original language.",
+    "emptyTitle": "No conversations yet",
+    "emptyText": "Open a lead to start a conversation.",
+    "columns": {
+      "lead": "Lead",
+      "channel": "Channel",
+      "language": "Language",
+      "messages": "Messages",
+      "started": "Started"
+    },
+    "toApprove": "{count, plural, one {# to approve} other {# to approve}}",
+    "new": {
+      "title": "Start a conversation",
+      "channel": "Channel",
+      "language": "Conversation language",
+      "languageHelp": "Used for AI replies and templates in this conversation.",
+      "sameAsLead": "Same as the lead",
+      "submit": "Start conversation"
+    },
+    "detail": {
+      "back": "Back to conversations",
+      "with": "Conversation with {name}",
+      "meta": "{channel} · language: {language}",
+      "unknownLanguage": "unknown",
+      "inbound": "From the lead",
+      "outbound": "From your team",
+      "aiGenerated": "AI-generated",
+      "fromAutomation": "From an automation",
+      "translate": "Translate to {language}",
+      "translating": "Translating…",
+      "translationLabel": "Translation ({language}). The original above is unchanged.",
+      "approve": "Approve",
+      "markSent": "Mark as sent",
+      "discard": "Delete draft",
+      "approvalNote": "Automated and AI-generated messages are never sent without approval. Channel integrations are not connected yet: after approving, send the message from your usual tool, then mark it as sent.",
+      "noMessages": "No messages yet."
+    },
+    "composer": {
+      "title": "Add a message",
+      "body": "Message",
+      "type": "Type",
+      "inbound": "Message received from the lead",
+      "draft": "Draft reply",
+      "submit": "Add message",
+      "submitting": "Adding…",
+      "insertTemplate": "Insert a template",
+      "chooseTemplate": "Choose a template",
+      "insert": "Insert",
+      "templateLanguage": "Templates are inserted in {language}, the language of this conversation.",
+      "templateMissing": "This template has no {language} version yet."
+    }
+  },
+  "Ai": {
+    "title": "AI assistant",
+    "outputLanguage": "Output language",
+    "recipientHelp": "Defaults to the language of the conversation or lead, not your interface language.",
+    "internalHelp": "Defaults to the workspace AI language setting.",
+    "suggestReply": "Suggest a reply",
+    "summarize": "Summarize this lead",
+    "generating": "Generating…",
+    "useAsDraft": "Save as draft reply",
+    "review": "AI-generated content: review it before using it.",
+    "draftVariant": "Draft with AI from another version",
+    "result": "Result"
+  },
+  "Automations": {
+    "title": "Automations",
+    "subtitle": "Prepare messages automatically when something happens. Every message waits for your approval.",
+    "automationsTitle": "Automations",
+    "templatesTitle": "Message templates",
+    "templatesSubtitle": "One version per communication language: {languages}.",
+    "columns": {
+      "name": "Name",
+      "trigger": "Trigger",
+      "template": "Template",
+      "channel": "Channel",
+      "status": "Status",
+      "kind": "Purpose",
+      "languages": "Languages"
+    },
+    "active": "Active",
+    "inactive": "Inactive",
+    "needsAttention": "Needs attention",
+    "missing": "Missing: {languages}",
+    "complete": "All languages ready",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "toggleLabel": "Status of {name}",
+    "emptyAutomations": "No automations yet.",
+    "emptyTemplates": "No templates yet. Create one to use in automations and conversations.",
+    "editVersions": "Edit versions",
+    "newAutomation": "New automation",
+    "newTemplate": "New template",
+    "form": {
+      "name": "Name",
+      "trigger": "Trigger",
+      "template": "Template",
+      "channel": "Channel",
+      "kind": "Purpose",
+      "createAutomation": "Create automation",
+      "createTemplate": "Create template",
+      "creating": "Creating…",
+      "createdInactive": "Automations are created inactive. Activate them when every language version is ready.",
+      "needTemplate": "Create a template before adding an automation."
+    },
+    "editor": {
+      "back": "Back to automations",
+      "subtitle": "{kind} · one version per language",
+      "versionTitle": "{language} version",
+      "subject": "Subject (email only)",
+      "body": "Message",
+      "placeholders": "Available placeholders: {list}",
+      "save": "Save {language} version",
+      "saved": "Version saved.",
+      "missingVersion": "This version is missing. Automations using this template cannot be activated until it is added.",
+      "deleteVersion": "Delete this version",
+      "deleteConfirm": "Delete this language version? Active automations using this template will be deactivated."
+    },
+    "preview": {
+      "title": "Which version will a lead receive?",
+      "lead": "Lead",
+      "submit": "Preview",
+      "recipient": "Prepared in {language}, the lead's language.",
+      "workspaceDefault": "Prepared in {language}, the workspace default (the lead's language is unknown or has no version).",
+      "missing": "No {language} version: nothing would be prepared.",
+      "noLeads": "Add a lead to preview messages."
+    }
+  },
+  "Analytics": {
+    "title": "Analytics",
+    "subtitle": "How your leads move through the pipeline.",
+    "byStatus": "Leads by stage",
+    "bySource": "Leads by source",
+    "conversion": "Conversion rate",
+    "wonValue": "Won value",
+    "closed": "Closed leads",
+    "noData": "Not enough data yet.",
+    "stage": "Stage",
+    "source": "Source",
+    "count": "Leads",
+    "share": "Share",
+    "sourceConversion": "Won"
+  },
+  "Integrations": {
+    "title": "Integrations",
+    "subtitle": "Connect SAVAN to the tools you already use.",
+    "notice": "Integrations are not available yet. Messages are recorded in SAVAN and sent from your usual tools.",
+    "comingSoon": "Coming soon",
+    "items": {
+      "email": {
+        "title": "Email",
+        "text": "Send and receive emails from conversations."
+      },
+      "messaging": {
+        "title": "SMS and messaging apps",
+        "text": "Reply to text messages where your leads write to you."
+      },
+      "calendar": {
+        "title": "Calendar",
+        "text": "Sync appointments with your calendar."
+      },
+      "forms": {
+        "title": "Website forms",
+        "text": "Create leads automatically from your website forms."
+      }
+    }
+  },
+  "Settings": {
+    "title": "Settings",
+    "subtitle": "Your profile and your workspace.",
+    "profileTitle": "Your profile",
+    "fullName": "Full name",
+    "uiLocale": "Interface language",
+    "uiLocaleHelp": "Language of menus, buttons and notifications in SAVAN. It does not change the language used with your leads.",
+    "saveProfile": "Save profile",
+    "workspaceTitle": "Workspace",
+    "internalAiLocale": "AI language for internal content",
+    "internalAiLocaleHelp": "Used for summaries and insights read by your team. Messages to leads always follow the lead's language.",
+    "sameAsInterface": "Each user's interface language",
+    "saveWorkspace": "Save workspace",
+    "saved": "Settings saved.",
+    "adminOnly": "Only workspace owners and admins can change these settings."
+  },
+  "Billing": {
+    "title": "Subscription",
+    "subtitle": "Manage your SAVAN plan.",
+    "currentPlan": "Current plan",
+    "noPlan": "You don't have an active subscription.",
+    "status": "Status",
+    "statuses": {
+      "active": "Active",
+      "trialing": "Trial",
+      "past_due": "Payment overdue",
+      "canceled": "Canceled",
+      "incomplete": "Incomplete",
+      "incomplete_expired": "Expired",
+      "unpaid": "Unpaid",
+      "paused": "Paused"
+    },
+    "renewsOn": "Renews on {date}",
+    "endsOn": "Ends on {date}",
+    "manage": "Manage billing",
+    "subscribe": "Subscribe to {plan}",
+    "redirecting": "Redirecting…",
+    "success": "Thank you! Your subscription is being activated.",
+    "canceledCheckout": "Checkout canceled. You have not been charged.",
+    "ownerOnly": "Only the workspace owner or an admin can manage billing.",
+    "securePayment": "Payments are processed securely by Stripe."
+  }
+}

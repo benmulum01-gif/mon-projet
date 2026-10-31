@@ -1,0 +1,679 @@
+{
+  "Meta": {
+    "title": "SAVAN — Des systèmes intelligents pour les entreprises",
+    "homeTitle": "SAVAN — Des systèmes intelligents pour les entreprises",
+    "description": "Transformez davantage d'opportunités en clients grâce à des systèmes intelligents de conversion des prospects."
+  },
+  "Common": {
+    "required": "obligatoire",
+    "optional": "facultatif",
+    "save": "Enregistrer",
+    "saving": "Enregistrement…",
+    "saved": "Enregistré.",
+    "cancel": "Annuler",
+    "loading": "Chargement…",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "view": "Voir",
+    "notSet": "Non renseigné",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "pageOf": "Page {page} sur {total}",
+    "actions": "Actions"
+  },
+  "Languages": {
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "LanguageSwitcher": {
+    "label": "Langue",
+    "unsavedChanges": "Vous avez des modifications non enregistrées. Changer de langue quand même ? Les saisies non enregistrées seront perdues."
+  },
+  "Nav": {
+    "pricing": "Tarifs",
+    "industries": "Secteurs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "signIn": "Connexion",
+    "signUp": "Commencer",
+    "openApp": "Ouvrir l'application",
+    "mainNav": "Navigation principale",
+    "skipToContent": "Aller au contenu"
+  },
+  "Footer": {
+    "tagline": "Des systèmes intelligents pour transformer davantage d'opportunités en clients.",
+    "product": "Produit",
+    "productNav": "Liens produit",
+    "company": "Entreprise",
+    "language": "Langue",
+    "copyright": "© {year} SAVAN"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Des systèmes intelligents pour les entreprises",
+      "title": "Transformez davantage d'opportunités en clients grâce à des systèmes intelligents de conversion des prospects.",
+      "subtitle": "SAVAN réunit vos prospects, conversations, rendez-vous et relances, avec un assistant IA qui écrit dans la langue de votre prospect — en français ou en anglais.",
+      "primaryCta": "Créer votre compte",
+      "secondaryCta": "Nous contacter"
+    },
+    "benefits": {
+      "title": "Tout pour ne laisser filer aucun prospect",
+      "respond": {
+        "title": "Répondez plus vite",
+        "text": "Obtenez des suggestions de réponse rédigées par l'IA dans la langue de chaque conversation, prêtes à être relues et envoyées."
+      },
+      "organize": {
+        "title": "Organisez chaque prospect",
+        "text": "Suivez chaque prospect du premier contact à la signature dans un pipeline clair."
+      },
+      "follow": {
+        "title": "N'oubliez plus aucune relance",
+        "text": "Les automatisations préparent vos relances et vos messages de rendez-vous. Rien n'est envoyé sans votre validation."
+      },
+      "measure": {
+        "title": "Mesurez ce qui fonctionne",
+        "text": "Suivez la conversion par étape et par source pour vous concentrer sur les canaux qui vous apportent des clients."
+      }
+    },
+    "how": {
+      "title": "Comment ça marche",
+      "capture": {
+        "title": "Centralisez",
+        "text": "Ajoutez vos prospects issus de votre site, de vos appels, de recommandations ou de publicités."
+      },
+      "engage": {
+        "title": "Échangez",
+        "text": "Gardez chaque conversation au même endroit, dans sa langue d'origine, avec une traduction à la demande."
+      },
+      "convert": {
+        "title": "Concluez",
+        "text": "Planifiez des rendez-vous, relancez au bon moment et faites passer vos prospects au statut gagné."
+      }
+    },
+    "cta": {
+      "title": "Prêt à convertir davantage de prospects ?",
+      "text": "Configurez votre espace de travail en quelques minutes, en français ou en anglais.",
+      "primary": "Commencer",
+      "secondary": "Voir les secteurs"
+    }
+  },
+  "Pricing": {
+    "title": "Tarifs",
+    "subtitle": "Des formules mensuelles simples, résiliables à tout moment depuis votre compte.",
+    "perMonth": "/ mois",
+    "taxNote": "Hors taxes applicables.",
+    "recommended": "Recommandé",
+    "choose": "Choisir {plan}",
+    "questions": "Des questions sur les formules ? <link>Contactez-nous</link>.",
+    "plans": {
+      "starter": {
+        "name": "Essentiel",
+        "description": "Pour les indépendants qui veulent s'organiser.",
+        "features": {
+          "f1": "Gestion des prospects et pipeline commercial",
+          "f2": "Rendez-vous",
+          "f3": "Modèles de messages bilingues",
+          "f4": "Assistance par e-mail"
+        }
+      },
+      "growth": {
+        "name": "Croissance",
+        "description": "Pour les équipes qui veulent automatiser leurs relances.",
+        "features": {
+          "f1": "Tout le contenu de la formule Essentiel",
+          "f2": "Automatisations avec validation",
+          "f3": "Assistant IA : réponses, résumés, traduction",
+          "f4": "Analyses par étape et par source"
+        }
+      }
+    }
+  },
+  "Industries": {
+    "title": "Secteurs",
+    "subtitle": "SAVAN convient aux entreprises qui gagnent leurs clients grâce aux échanges et aux rendez-vous.",
+    "items": {
+      "homeServices": {
+        "title": "Services à domicile",
+        "text": "Répondez vite aux demandes de devis et planifiez les visites sur place."
+      },
+      "realEstate": {
+        "title": "Immobilier",
+        "text": "Relancez acheteurs et vendeurs et organisez les visites."
+      },
+      "wellness": {
+        "title": "Bien-être et services à la personne",
+        "text": "Transformez les demandes de renseignements en séances réservées."
+      },
+      "professionalServices": {
+        "title": "Services professionnels",
+        "text": "Qualifiez vos prospects et planifiez des rendez-vous de découverte pour votre cabinet."
+      },
+      "education": {
+        "title": "Formation et enseignement",
+        "text": "Suivez les futurs apprenants jusqu'à leur inscription."
+      },
+      "agencies": {
+        "title": "Agences marketing",
+        "text": "Gérez les prospects de votre agence et suivez la conversion par canal."
+      }
+    },
+    "cta": "Parlez-nous de votre activité"
+  },
+  "Faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "L'essentiel à savoir avant de commencer.",
+    "items": {
+      "what": {
+        "question": "Qu'est-ce que SAVAN ?",
+        "answer": "SAVAN est une application web qui aide les entreprises à gérer prospects, conversations, rendez-vous et relances au même endroit, avec un assistant IA pour rédiger et résumer."
+      },
+      "who": {
+        "question": "À qui s'adresse SAVAN ?",
+        "answer": "Aux TPE et PME qui gagnent leurs clients grâce aux demandes de contact, aux devis et aux rendez-vous."
+      },
+      "languages": {
+        "question": "Quelles langues sont disponibles ?",
+        "answer": "SAVAN est entièrement disponible en français et en anglais. Votre équipe peut utiliser l'interface dans une langue et écrire à ses prospects dans une autre."
+      },
+      "aiSending": {
+        "question": "L'IA envoie-t-elle des messages toute seule ?",
+        "answer": "Non. Les suggestions de l'IA et les messages automatiques sont des brouillons. Ils ne sont marqués comme envoyés qu'après la validation d'un membre de votre équipe."
+      },
+      "data": {
+        "question": "Qui peut voir mes données ?",
+        "answer": "Chaque espace de travail est cloisonné : seuls ses membres peuvent accéder à ses prospects et à ses conversations. Les coordonnées des prospects sont conservées telles que saisies et ne sont jamais traduites automatiquement."
+      },
+      "billing": {
+        "question": "Comment fonctionne la facturation ?",
+        "answer": "Les formules sont facturées chaque mois. Les paiements sont traités par Stripe."
+      },
+      "cancel": {
+        "question": "Puis-je résilier à tout moment ?",
+        "answer": "Oui. Vous pouvez résilier depuis la page Abonnement de votre compte. Votre formule reste active jusqu'à la fin de la période de facturation en cours."
+      },
+      "integrations": {
+        "question": "SAVAN se connecte-t-il à ma messagerie ou à mon agenda ?",
+        "answer": "Pas encore. Les intégrations sont en cours de développement. Aujourd'hui, vous enregistrez vos messages dans SAVAN et les envoyez depuis vos outils habituels."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Nous contacter",
+    "subtitle": "Une question sur SAVAN ? Envoyez-nous un message, nous vous répondrons par e-mail.",
+    "form": {
+      "fullName": "Nom complet",
+      "email": "E-mail",
+      "company": "Entreprise",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "sending": "Envoi…",
+      "success": "Merci, votre message a bien été envoyé. Nous vous répondrons par e-mail.",
+      "dataNotice": "Nous utilisons ces informations uniquement pour répondre à votre message."
+    }
+  },
+  "Validation": {
+    "required": "Ce champ est obligatoire.",
+    "invalidEmail": "Saisissez une adresse e-mail valide.",
+    "tooLong": "Cette valeur est trop longue.",
+    "tooShort": "Cette valeur est trop courte.",
+    "passwordTooShort": "Utilisez au moins 8 caractères.",
+    "invalidNumber": "Saisissez un montant valide, par exemple 1500,50.",
+    "invalidDate": "Saisissez une date et une heure valides.",
+    "invalidChoice": "Choisissez une option valide."
+  },
+  "Errors": {
+    "generic": "Une erreur est survenue. Veuillez réessayer.",
+    "invalidCredentials": "E-mail ou mot de passe incorrect.",
+    "emailInUse": "Un compte existe déjà avec cet e-mail.",
+    "rateLimited": "Trop de tentatives. Patientez un instant puis réessayez.",
+    "automationMissingTranslations": "Il manque une version linguistique à ce modèle. Ajoutez toutes les versions avant d'activer.",
+    "aiNotConfigured": "Les fonctions d'IA ne sont pas encore configurées (clé d'API manquante).",
+    "aiFailed": "L'IA n'a pas pu générer de réponse. Veuillez réessayer.",
+    "aiRefused": "L'IA a refusé cette demande.",
+    "stripeNotConfigured": "Les paiements ne sont pas encore configurés.",
+    "forbidden": "Vous n'avez pas l'autorisation d'effectuer cette action."
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "text": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "home": "Retour à l'accueil"
+  },
+  "Auth": {
+    "signInTitle": "Connexion",
+    "signInSubtitle": "Bon retour sur SAVAN.",
+    "signUpTitle": "Créer votre compte",
+    "signUpSubtitle": "Commencez à organiser vos prospects en quelques minutes.",
+    "fullName": "Nom complet",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "passwordHint": "Au moins 8 caractères.",
+    "signIn": "Se connecter",
+    "signingIn": "Connexion…",
+    "signUp": "Créer un compte",
+    "signingUp": "Création du compte…",
+    "noAccount": "Pas encore de compte ?",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "checkEmail": "Consultez votre boîte de réception : nous vous avons envoyé un lien pour confirmer votre adresse e-mail."
+  },
+  "Onboarding": {
+    "title": "Configurez votre espace de travail",
+    "subtitle": "Présentez votre entreprise. Vous pourrez modifier ces réglages plus tard.",
+    "submit": "Créer l'espace de travail",
+    "submitting": "Création…"
+  },
+  "WorkspaceFields": {
+    "name": "Nom de l'entreprise",
+    "commLocales": "Langues utilisées avec vos prospects",
+    "commLocalesHelp": "Chaque modèle de message doit avoir une version dans chacune des langues sélectionnées ici.",
+    "defaultCommLocale": "Langue de communication par défaut",
+    "defaultCommLocaleHelp": "Utilisée lorsque la langue d'un prospect est inconnue. Elle doit faire partie des langues ci-dessus.",
+    "timezone": "Fuseau horaire",
+    "timezoneHelp": "Les rendez-vous et les dates sont affichés dans ce fuseau horaire.",
+    "currency": "Devise",
+    "currencyHelp": "Utilisée pour la valeur des prospects. Elle ne dépend pas de la langue."
+  },
+  "AppNav": {
+    "label": "Application",
+    "overview": "Vue d'ensemble",
+    "leads": "Prospects",
+    "pipeline": "Pipeline commercial",
+    "appointments": "Rendez-vous",
+    "conversations": "Conversations",
+    "automations": "Automatisations",
+    "analytics": "Analyses",
+    "integrations": "Intégrations",
+    "settings": "Paramètres",
+    "billing": "Abonnement"
+  },
+  "AppShell": {
+    "interfaceLanguage": "Langue de l'interface",
+    "signOut": "Se déconnecter",
+    "openMenu": "Menu",
+    "closeMenu": "Fermer le menu",
+    "skipToContent": "Aller au contenu"
+  },
+  "LeadStatus": {
+    "new": "Nouveau prospect",
+    "contacted": "Contacté",
+    "qualified": "Qualifié",
+    "appointment_booked": "Rendez-vous réservé",
+    "won": "Gagné",
+    "lost": "Perdu"
+  },
+  "LeadSource": {
+    "website": "Site web",
+    "referral": "Recommandation",
+    "ads": "Publicité",
+    "social": "Réseaux sociaux",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "other": "Autre"
+  },
+  "Channel": {
+    "email": "E-mail",
+    "sms": "SMS",
+    "whatsapp": "WhatsApp",
+    "web_chat": "Chat du site",
+    "phone": "Téléphone"
+  },
+  "MessageStatus": {
+    "received": "Reçu",
+    "draft": "Brouillon",
+    "pending_approval": "En attente de validation",
+    "approved": "Validé",
+    "sent": "Envoyé"
+  },
+  "AppointmentStatus": {
+    "scheduled": "Planifié",
+    "completed": "Terminé",
+    "cancelled": "Annulé",
+    "no_show": "Absent"
+  },
+  "TemplateKind": {
+    "initial_contact": "Premier contact",
+    "follow_up": "Relance",
+    "appointment_confirmation": "Confirmation de rendez-vous",
+    "appointment_reminder": "Rappel de rendez-vous",
+    "rescheduling": "Report de rendez-vous",
+    "reactivation": "Réactivation",
+    "internal_notification": "Notification interne"
+  },
+  "AutomationTrigger": {
+    "lead_created": "Quand un prospect est ajouté",
+    "lead_status_changed": "Quand un prospect change d'étape",
+    "appointment_booked": "Quand un rendez-vous est planifié"
+  },
+  "Overview": {
+    "title": "Vue d'ensemble",
+    "subtitle": "Votre activité commerciale en un coup d'œil.",
+    "metrics": {
+      "totalLeads": "Prospects au total",
+      "newThisWeek": "Nouveaux sur les 7 derniers jours",
+      "conversionRate": "Taux de conversion",
+      "conversionHelp": "Prospects gagnés divisés par les prospects clôturés (gagnés + perdus).",
+      "upcomingAppointments": "Rendez-vous à venir",
+      "pendingApprovals": "Messages en attente de validation",
+      "pipelineValue": "Valeur du pipeline en cours"
+    },
+    "recentLeads": "Prospects récents",
+    "viewAll": "Voir tous les prospects",
+    "upcoming": "Prochains rendez-vous",
+    "noUpcoming": "Aucun rendez-vous à venir.",
+    "noLeadsTitle": "Aucun prospect pour l'instant",
+    "noLeadsText": "Ajoutez votre premier prospect pour commencer à suivre votre pipeline.",
+    "addLead": "Ajouter un prospect",
+    "reviewApprovals": "Vérifier les messages"
+  },
+  "Leads": {
+    "title": "Prospects",
+    "subtitle": "Toutes les personnes intéressées par votre activité.",
+    "add": "Ajouter un prospect",
+    "search": "Rechercher",
+    "searchPlaceholder": "Nom, e-mail ou entreprise",
+    "status": "Statut",
+    "source": "Source",
+    "allStatuses": "Tous les statuts",
+    "allSources": "Toutes les sources",
+    "apply": "Appliquer les filtres",
+    "clearFilters": "Effacer les filtres",
+    "results": "{count, plural, =0 {Aucun prospect} one {# prospect} other {# prospects}}",
+    "columns": {
+      "name": "Nom",
+      "company": "Entreprise",
+      "contact": "Coordonnées",
+      "status": "Statut",
+      "source": "Source",
+      "language": "Langue",
+      "value": "Valeur",
+      "created": "Ajouté le"
+    },
+    "emptyTitle": "Aucun prospect pour l'instant",
+    "emptyText": "Ajoutez votre premier prospect pour commencer à suivre votre pipeline.",
+    "emptyFiltered": "Aucun prospect ne correspond à ces filtres.",
+    "newTitle": "Ajouter un prospect",
+    "newSubtitle": "Les coordonnées sont enregistrées telles que saisies.",
+    "form": {
+      "fullName": "Nom complet",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "company": "Entreprise",
+      "source": "Source",
+      "status": "Étape",
+      "preferredLocale": "Langue préférée",
+      "preferredLocaleHelp": "Utilisée pour les messages automatiques et les réponses de l'IA à ce prospect.",
+      "unknownLanguage": "Inconnue (utiliser la langue par défaut)",
+      "value": "Valeur estimée ({currency})",
+      "valueHelp": "Facultatif. Exemple : 1500,50",
+      "notes": "Notes",
+      "create": "Créer le prospect",
+      "save": "Enregistrer les modifications",
+      "saving": "Enregistrement…",
+      "saved": "Prospect enregistré."
+    },
+    "detail": {
+      "back": "Retour aux prospects",
+      "created": "Prospect créé.",
+      "edit": "Modifier le prospect",
+      "delete": "Supprimer le prospect",
+      "deleteConfirm": "Supprimer ce prospect et toutes ses conversations ? Cette action est irréversible.",
+      "conversations": "Conversations",
+      "noConversations": "Aucune conversation pour l'instant.",
+      "appointments": "Rendez-vous",
+      "noAppointments": "Aucun rendez-vous pour l'instant.",
+      "bookAppointment": "Planifier un rendez-vous",
+      "messagesCount": "{count, plural, =0 {Aucun message} one {# message} other {# messages}}"
+    }
+  },
+  "Pipeline": {
+    "title": "Pipeline commercial",
+    "subtitle": "Faites avancer vos prospects d'une étape à l'autre.",
+    "moveLabel": "Étape de {name}",
+    "move": "Déplacer",
+    "emptyColumn": "Aucun prospect",
+    "count": "{count, plural, one {# prospect} other {# prospects}}"
+  },
+  "Appointments": {
+    "title": "Rendez-vous",
+    "subtitle": "Les rendez-vous planifiés avec vos prospects.",
+    "book": "Planifier un rendez-vous",
+    "upcoming": "À venir",
+    "past": "Passés",
+    "emptyUpcoming": "Aucun rendez-vous à venir.",
+    "emptyPast": "Aucun rendez-vous passé.",
+    "timeZoneNote": "Les horaires sont affichés dans le fuseau horaire de l'entreprise ({timeZone}).",
+    "columns": {
+      "when": "Date",
+      "lead": "Prospect",
+      "duration": "Durée",
+      "location": "Lieu",
+      "status": "Statut"
+    },
+    "minutes": "{minutes, plural, one {# minute} other {# minutes}}",
+    "statusLabel": "Statut du rendez-vous avec {name}",
+    "update": "Mettre à jour",
+    "form": {
+      "lead": "Prospect",
+      "selectLead": "Choisir un prospect",
+      "startsAt": "Date et heure",
+      "startsAtHelp": "Dans le fuseau horaire de l'entreprise ({timeZone}).",
+      "duration": "Durée (minutes)",
+      "location": "Lieu ou lien de réunion",
+      "notes": "Notes",
+      "submit": "Planifier le rendez-vous",
+      "submitting": "Planification…",
+      "booked": "Rendez-vous planifié.",
+      "noLeads": "Ajoutez un prospect avant de planifier un rendez-vous."
+    }
+  },
+  "Conversations": {
+    "title": "Conversations",
+    "subtitle": "Les messages échangés avec vos prospects, dans leur langue d'origine.",
+    "emptyTitle": "Aucune conversation pour l'instant",
+    "emptyText": "Ouvrez la fiche d'un prospect pour démarrer une conversation.",
+    "columns": {
+      "lead": "Prospect",
+      "channel": "Canal",
+      "language": "Langue",
+      "messages": "Messages",
+      "started": "Démarrée le"
+    },
+    "toApprove": "{count, plural, one {# à valider} other {# à valider}}",
+    "new": {
+      "title": "Démarrer une conversation",
+      "channel": "Canal",
+      "language": "Langue de la conversation",
+      "languageHelp": "Utilisée pour les réponses de l'IA et les modèles dans cette conversation.",
+      "sameAsLead": "Identique à celle du prospect",
+      "submit": "Démarrer la conversation"
+    },
+    "detail": {
+      "back": "Retour aux conversations",
+      "with": "Conversation avec {name}",
+      "meta": "{channel} · langue : {language}",
+      "unknownLanguage": "inconnue",
+      "inbound": "Du prospect",
+      "outbound": "De votre équipe",
+      "aiGenerated": "Généré par l'IA",
+      "fromAutomation": "Issu d'une automatisation",
+      "translate": "Traduire en {language}",
+      "translating": "Traduction…",
+      "translationLabel": "Traduction ({language}). L'original ci-dessus n'est pas modifié.",
+      "approve": "Valider",
+      "markSent": "Marquer comme envoyé",
+      "discard": "Supprimer le brouillon",
+      "approvalNote": "Les messages automatiques et générés par l'IA ne sont jamais envoyés sans validation. Les canaux ne sont pas encore connectés : après validation, envoyez le message depuis votre outil habituel, puis marquez-le comme envoyé.",
+      "noMessages": "Aucun message pour l'instant."
+    },
+    "composer": {
+      "title": "Ajouter un message",
+      "body": "Message",
+      "type": "Type",
+      "inbound": "Message reçu du prospect",
+      "draft": "Brouillon de réponse",
+      "submit": "Ajouter le message",
+      "submitting": "Ajout…",
+      "insertTemplate": "Insérer un modèle",
+      "chooseTemplate": "Choisir un modèle",
+      "insert": "Insérer",
+      "templateLanguage": "Les modèles sont insérés en {language}, la langue de cette conversation.",
+      "templateMissing": "Ce modèle n'a pas encore de version en {language}."
+    }
+  },
+  "Ai": {
+    "title": "Assistant IA",
+    "outputLanguage": "Langue de sortie",
+    "recipientHelp": "Par défaut : la langue de la conversation ou du prospect, et non celle de votre interface.",
+    "internalHelp": "Par défaut : la langue IA définie pour votre espace de travail.",
+    "suggestReply": "Suggérer une réponse",
+    "summarize": "Résumer ce prospect",
+    "generating": "Génération…",
+    "useAsDraft": "Enregistrer comme brouillon",
+    "review": "Contenu généré par l'IA : relisez-le avant de l'utiliser.",
+    "draftVariant": "Rédiger avec l'IA à partir d'une autre version",
+    "result": "Résultat"
+  },
+  "Automations": {
+    "title": "Automatisations",
+    "subtitle": "Préparez des messages automatiquement lorsqu'un événement se produit. Chaque message attend votre validation.",
+    "automationsTitle": "Automatisations",
+    "templatesTitle": "Modèles de messages",
+    "templatesSubtitle": "Une version par langue de communication : {languages}.",
+    "columns": {
+      "name": "Nom",
+      "trigger": "Déclencheur",
+      "template": "Modèle",
+      "channel": "Canal",
+      "status": "Statut",
+      "kind": "Usage",
+      "languages": "Langues"
+    },
+    "active": "Active",
+    "inactive": "Inactive",
+    "needsAttention": "À compléter",
+    "missing": "Manquant : {languages}",
+    "complete": "Toutes les langues sont prêtes",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "toggleLabel": "Statut de {name}",
+    "emptyAutomations": "Aucune automatisation pour l'instant.",
+    "emptyTemplates": "Aucun modèle pour l'instant. Créez-en un pour l'utiliser dans vos automatisations et conversations.",
+    "editVersions": "Modifier les versions",
+    "newAutomation": "Nouvelle automatisation",
+    "newTemplate": "Nouveau modèle",
+    "form": {
+      "name": "Nom",
+      "trigger": "Déclencheur",
+      "template": "Modèle",
+      "channel": "Canal",
+      "kind": "Usage",
+      "createAutomation": "Créer l'automatisation",
+      "createTemplate": "Créer le modèle",
+      "creating": "Création…",
+      "createdInactive": "Les automatisations sont créées inactives. Activez-les lorsque toutes les versions linguistiques sont prêtes.",
+      "needTemplate": "Créez un modèle avant d'ajouter une automatisation."
+    },
+    "editor": {
+      "back": "Retour aux automatisations",
+      "subtitle": "{kind} · une version par langue",
+      "versionTitle": "Version en {language}",
+      "subject": "Objet (e-mail uniquement)",
+      "body": "Message",
+      "placeholders": "Variables disponibles : {list}",
+      "save": "Enregistrer la version en {language}",
+      "saved": "Version enregistrée.",
+      "missingVersion": "Cette version est manquante. Les automatisations qui utilisent ce modèle ne peuvent pas être activées tant qu'elle n'est pas ajoutée.",
+      "deleteVersion": "Supprimer cette version",
+      "deleteConfirm": "Supprimer cette version linguistique ? Les automatisations actives qui utilisent ce modèle seront désactivées."
+    },
+    "preview": {
+      "title": "Quelle version un prospect recevra-t-il ?",
+      "lead": "Prospect",
+      "submit": "Prévisualiser",
+      "recipient": "Préparé en {language}, la langue du prospect.",
+      "workspaceDefault": "Préparé en {language}, la langue par défaut de l'espace (la langue du prospect est inconnue ou n'a pas de version).",
+      "missing": "Aucune version en {language} : aucun message ne serait préparé.",
+      "noLeads": "Ajoutez un prospect pour prévisualiser les messages."
+    }
+  },
+  "Analytics": {
+    "title": "Analyses",
+    "subtitle": "Comment vos prospects avancent dans le pipeline.",
+    "byStatus": "Prospects par étape",
+    "bySource": "Prospects par source",
+    "conversion": "Taux de conversion",
+    "wonValue": "Valeur gagnée",
+    "closed": "Prospects clôturés",
+    "noData": "Pas encore assez de données.",
+    "stage": "Étape",
+    "source": "Source",
+    "count": "Prospects",
+    "share": "Part",
+    "sourceConversion": "Gagnés"
+  },
+  "Integrations": {
+    "title": "Intégrations",
+    "subtitle": "Connectez SAVAN aux outils que vous utilisez déjà.",
+    "notice": "Les intégrations ne sont pas encore disponibles. Les messages sont enregistrés dans SAVAN et envoyés depuis vos outils habituels.",
+    "comingSoon": "Bientôt disponible",
+    "items": {
+      "email": {
+        "title": "Messagerie",
+        "text": "Envoyez et recevez des e-mails depuis les conversations."
+      },
+      "messaging": {
+        "title": "SMS et messageries",
+        "text": "Répondez aux messages là où vos prospects vous écrivent."
+      },
+      "calendar": {
+        "title": "Agenda",
+        "text": "Synchronisez vos rendez-vous avec votre agenda."
+      },
+      "forms": {
+        "title": "Formulaires du site",
+        "text": "Créez automatiquement des prospects à partir des formulaires de votre site."
+      }
+    }
+  },
+  "Settings": {
+    "title": "Paramètres",
+    "subtitle": "Votre profil et votre espace de travail.",
+    "profileTitle": "Votre profil",
+    "fullName": "Nom complet",
+    "uiLocale": "Langue de l'interface",
+    "uiLocaleHelp": "Langue des menus, boutons et notifications de SAVAN. Elle ne change pas la langue utilisée avec vos prospects.",
+    "saveProfile": "Enregistrer le profil",
+    "workspaceTitle": "Espace de travail",
+    "internalAiLocale": "Langue de l'IA pour le contenu interne",
+    "internalAiLocaleHelp": "Utilisée pour les résumés et analyses lus par votre équipe. Les messages aux prospects suivent toujours la langue du prospect.",
+    "sameAsInterface": "La langue d'interface de chaque utilisateur",
+    "saveWorkspace": "Enregistrer l'espace de travail",
+    "saved": "Paramètres enregistrés.",
+    "adminOnly": "Seuls les propriétaires et administrateurs de l'espace peuvent modifier ces réglages."
+  },
+  "Billing": {
+    "title": "Abonnement",
+    "subtitle": "Gérez votre formule SAVAN.",
+    "currentPlan": "Formule actuelle",
+    "noPlan": "Vous n'avez pas d'abonnement actif.",
+    "status": "Statut",
+    "statuses": {
+      "active": "Actif",
+      "trialing": "Essai",
+      "past_due": "Paiement en retard",
+      "canceled": "Résilié",
+      "incomplete": "Incomplet",
+      "incomplete_expired": "Expiré",
+      "unpaid": "Impayé",
+      "paused": "Suspendu"
+    },
+    "renewsOn": "Renouvellement le {date}",
+    "endsOn": "Prend fin le {date}",
+    "manage": "Gérer la facturation",
+    "subscribe": "Souscrire à la formule {plan}",
+    "redirecting": "Redirection…",
+    "success": "Merci ! Votre abonnement est en cours d'activation.",
+    "canceledCheckout": "Paiement annulé. Aucun montant n'a été débité.",
+    "ownerOnly": "Seul le propriétaire ou un administrateur de l'espace peut gérer la facturation.",
+    "securePayment": "Les paiements sont traités de manière sécurisée par Stripe."
+  }
+}

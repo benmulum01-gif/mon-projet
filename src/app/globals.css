@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef6f6;
+  --color-brand-100: #d5eaea;
+  --color-brand-600: #0f6e6e;
+  --color-brand-700: #0b5858;
+  --color-brand-800: #084343;
+  --color-ink-900: #0f172a;
+  --color-ink-700: #334155;
+  --color-ink-600: #475569;
+  --color-ink-500: #5b6678;
+  --color-line: #d8dee8;
+  --color-surface: #f6f8fb;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  color: var(--color-ink-900);
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Long French words and user data must wrap instead of overflowing. */
+h1, h2, h3, p, li, td, th, label, dd, dt {
+  overflow-wrap: break-word;
+}
+
+/* Hyphenate running text only; headings break between words. */
+p, li, td, dd {
+  hyphens: auto;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-brand-600);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
