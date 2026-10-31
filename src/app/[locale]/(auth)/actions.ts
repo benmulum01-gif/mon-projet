@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { isLocale, type Locale } from "@/i18n/config";
+import { company } from "@/config/company";
 import { env } from "@/lib/env";
 import { fieldErrorsFrom, optionalText, type FormState } from "@/lib/forms";
 import { createClient } from "@/lib/supabase/server";
@@ -27,10 +28,11 @@ const signUpSchema = z.object({
   email,
   password: z.string().min(8, "passwordTooShort").max(72, "tooLong"),
   locale: z.string().refine(isLocale, "invalidChoice"),
+  acceptTerms: z.literal("yes", "termsRequired"),
 });
 
 export async function signUp(_prev: FormState<{ checkEmail: boolean }>, formData: FormData): Promise<FormState<{ checkEmail: boolean }>> {
-  const parsed = signUpSchema.safeParse(Object.fromEntries(formData));
+  const parsed = signUpSchema.safeParse({ ...Object.fromEntries(formData), acceptTerms: formData.get("acceptTerms") ?? "" });
   if (!parsed.success) return { fieldErrors: fieldErrorsFrom(parsed.error), nonce: Date.now() };
   const locale = parsed.data.locale as Locale;
 
@@ -40,7 +42,8 @@ export async function signUp(_prev: FormState<{ checkEmail: boolean }>, formData
     password: parsed.data.password,
     options: {
       // The language used during sign-up becomes the saved interface preference.
-      data: { full_name: parsed.data.fullName ?? "", ui_locale: locale },
+      // terms_version is stored with the acceptance date as proof of consent to the CGU.
+      data: { full_name: parsed.data.fullName ?? "", ui_locale: locale, terms_version: company.termsVersion },
       emailRedirectTo: `${env.siteUrl}/auth/confirm?next=/${locale}/app`,
     },
   });

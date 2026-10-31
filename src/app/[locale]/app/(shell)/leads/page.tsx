@@ -84,7 +84,7 @@ export default async function LeadsPage({ searchParams }: PageProps<"/[locale]/a
           <EmptyState title={t("emptyTitle")} text={t("emptyText")} action={<Link href="/app/leads/new" className={buttonClass()}>{t("add")}</Link>} />
         )
       ) : (
-        <div className="relative overflow-x-auto rounded-lg border border-line bg-white">
+        <div className="relative overflow-x-auto rounded-lg border border-line bg-white" tabIndex={0} role="region" aria-label={t("title")}>
           <table className="w-full min-w-[720px] text-left text-sm">
             <thead className="bg-surface text-ink-700">
               <tr>

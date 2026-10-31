@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
 import { AppNav } from "@/components/app/app-nav";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { LegalLinks } from "@/components/legal-links";
 import { requireAppContext } from "@/lib/app-context";
 import { signOut } from "../../(auth)/actions";
 
@@ -57,9 +58,14 @@ export default async function ShellLayout({ children }: LayoutProps<"/[locale]/a
         </div>
       </details>
 
-      <main id="main" className="min-w-0 flex-1 px-4 py-6 sm:px-8">
-        {children}
-      </main>
+      <div className="flex min-w-0 flex-1 flex-col">
+        <main id="main" className="min-w-0 flex-1 px-4 py-6 sm:px-8">
+          {children}
+        </main>
+        <footer className="border-t border-line px-4 py-4 sm:px-8">
+          <LegalLinks />
+        </footer>
+      </div>
     </div>
   );
 }

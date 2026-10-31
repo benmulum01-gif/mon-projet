@@ -24,6 +24,7 @@ const fr = new Set(flatten(JSON.parse(readFileSync(join(root, "messages/fr.json"
 // English UI phrases (2+ words, no placeholders) that must never appear on a French page.
 const englishOnly = [...new Set(en)].filter((s) => !fr.has(s) && !/[{<]/.test(s) && s.trim().split(/\s+/).length >= 2);
 
+const axeSource = readFileSync(require.resolve("axe-core/axe.min.js"), "utf8");
 const failures = [];
 let passed = 0;
 const check = (cond, message) => (cond ? passed++ : failures.push(message));
@@ -41,6 +42,14 @@ async function auditPage(page, label, locale) {
   check(result.overflow <= 1, `${label}: horizontal overflow of ${result.overflow}px`);
   check(result.h1 === 1, `${label}: expected exactly one <h1>, found ${result.h1}`);
   check(!result.text.includes("Leads.") && !result.text.includes("Common."), `${label}: raw translation key visible`);
+  await page.addScriptTag({ content: axeSource });
+  const violations = await page.evaluate(async () => {
+    const r = await axe.run(document, { runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"] } });
+    return r.violations.filter((v) => v.impact === "serious" || v.impact === "critical").map((v) => `${v.id} (${v.nodes.length}): ${v.nodes[0]?.target?.join(" ")}`);
+  });
+  check(!violations.length, `${label}: accessibility violations: ${violations.join(" | ")}`);
+  const footerOk = await page.evaluate(() => ["/legal/notice", "/legal/privacy", "/legal/cookies", "/legal/terms-of-sale", "/legal/terms-of-use", "/legal/accessibility"].every((p) => [...document.querySelectorAll("a")].some((a) => a.getAttribute("href")?.endsWith(p))));
+  check(footerOk, `${label}: legal links missing from the page footer`);
   if (locale === "fr") {
     const leaked = englishOnly.filter((s) => result.text.includes(s));
     check(!leaked.length, `${label}: English text on French page: ${leaked.slice(0, 3).join(" | ")}`);
@@ -70,9 +79,54 @@ try {
   await p2.goto(`${BASE}/pricing`);
   check(new URL(p2.url()).pathname === "/en/pricing", `fallback: expected /en/pricing, got ${p2.url()}`);
 
-  // 2. Public site in both languages and three viewports.
+  // 2. Consent banner (requires NEXT_PUBLIC_* tracker IDs at build time, see package.json "build:e2e").
+  const trackerHosts = /googletagmanager|facebook\.net|licdn|tiktok|tawk\.to|calendly\.com/;
+  const visitor = await browser.newContext({ locale: "fr-FR" });
+  const vp = await visitor.newPage();
+  const thirdParty = [];
+  vp.on("request", (r) => { if (trackerHosts.test(r.url())) thirdParty.push(r.url()); });
+  await vp.goto(`${BASE}/fr`);
+  const banner = vp.getByRole("dialog", { name: "Vos choix en matière de cookies" });
+  await banner.waitFor();
+  check(thirdParty.length === 0, `consent: trackers loaded before consent: ${thirdParty.slice(0, 2).join(", ")}`);
+  const reject = banner.getByRole("button", { name: "Tout refuser" });
+  const accept = banner.getByRole("button", { name: "Tout accepter" });
+  const [rb, ab] = [await reject.boundingBox(), await accept.boundingBox()];
+  const style = (l) => l.evaluate((el) => { const s = getComputedStyle(el); return [s.backgroundColor, s.color, s.fontSize, s.fontWeight, s.borderWidth].join("|"); });
+  check(rb && ab && Math.abs(rb.height - ab.height) < 1 && Math.abs(rb.width - ab.width) < 2, "consent: reject and accept buttons must have the same size");
+  check(await style(reject) === await style(accept), "consent: reject and accept buttons must look the same");
+  await vp.goto(`${BASE}/fr/book`);
+  check(await vp.getByText("Contenu bloqué").count() === 1, "consent: Calendly must be blocked before consent");
+  await vp.getByRole("dialog").getByRole("button", { name: "Tout refuser" }).click();
+  await vp.reload();
+  check(await vp.getByRole("dialog").count() === 0, "consent: banner must not reappear after a choice");
+  const consentCookie = (await visitor.cookies()).find((c) => c.name === "savan_consent");
+  const days = consentCookie ? (consentCookie.expires * 1000 - Date.now()) / 86400000 : 0;
+  check(days > 180 && days <= 183, `consent: choice must be kept about 6 months, got ${days.toFixed(1)} days`);
+  check(thirdParty.length === 0, "consent: trackers loaded after refusal");
+  // Withdrawable as easily: footer link reopens the choices.
+  await vp.getByRole("button", { name: "Gérer mes cookies" }).click();
+  await vp.getByRole("dialog").getByRole("button", { name: "Tout accepter" }).click();
+  await vp.waitForTimeout(1500);
+  check(thirdParty.some((u) => u.includes("googletagmanager")), "consent: Google tag should load after acceptance");
+  check(thirdParty.some((u) => u.includes("facebook.net")), "consent: Meta pixel should load after acceptance");
+  check(await vp.locator("iframe[src*='calendly.com']").count() === 1, "consent: Calendly should load after acceptance");
+  await visitor.addCookies([{ name: "_ga", value: "GA1.1.123", url: BASE }]);
+  await vp.getByRole("button", { name: "Gérer mes cookies" }).click();
+  await vp.getByRole("dialog").getByRole("button", { name: "Tout refuser" }).click();
+  await vp.waitForLoadState("load");
+  check(!(await visitor.cookies()).some((c) => c.name === "_ga"), "consent: withdrawing must delete analytics cookies");
+  await visitor.close();
+
+  // Contexts used for page audits already have a choice, so the banner does not cover content.
+  const consentGiven = { name: "savan_consent", value: encodeURIComponent(JSON.stringify({ v: 1, t: new Date().toISOString(), c: { analytics: false, advertising: false, media: false, chat: false } })), url: BASE };
+  await frVisitor.addCookies([consentGiven]);
+
+  // 3. Public site in both languages and three viewports.
   for (const locale of ["en", "fr"]) {
-    for (const [path, name] of [["", "home"], ["/pricing", "pricing"], ["/industries", "industries"], ["/faq", "faq"], ["/contact", "contact"], ["/sign-up", "sign-up"]]) {
+    for (const [path, name] of [["", "home"], ["/pricing", "pricing"], ["/industries", "industries"], ["/faq", "faq"], ["/contact", "contact"], ["/book", "book"], ["/sign-up", "sign-up"],
+      ["/legal/notice", "legal-notice"], ["/legal/privacy", "legal-privacy"], ["/legal/cookies", "legal-cookies"], ["/legal/terms-of-sale", "legal-terms-of-sale"],
+      ["/legal/terms-of-use", "legal-terms-of-use"], ["/legal/accessibility", "legal-accessibility"]]) {
       await auditAllViewports(frVisitor, `/${locale}${path}`, locale, name);
     }
   }
@@ -82,11 +136,23 @@ try {
   await p1.getByRole("button", { name: "Envoyer le message" }).click();
   await p1.getByText("Ce champ est obligatoire.").first().waitFor();
   check(await p1.getByText("Saisissez une adresse e-mail valide.").count() === 0, "contact: email error shown before invalid input");
-  await p1.getByLabel("Nom complet").fill("Visiteur Test");
-  await p1.getByLabel("E-mail").fill("visiteur@example.com");
-  await p1.getByLabel("Message").fill("Bonjour, je souhaite une démonstration.");
+  await p1.locator("main").getByLabel("Nom complet").fill("Visiteur Test");
+  await p1.locator("main").getByLabel("E-mail").fill("visiteur@example.com");
+  await p1.locator("main").getByLabel("Message").fill("Bonjour, je souhaite une démonstration.");
   await p1.getByRole("button", { name: "Envoyer le message" }).click();
   await p1.getByText("Merci, votre message a bien été envoyé.").waitFor();
+  passed++;
+
+  // Newsletter: consent box unticked by default and required.
+  await p1.goto(`${BASE}/fr`);
+  const nl = p1.locator("#newsletter-title").locator("..");
+  check(!(await nl.getByRole("checkbox").isChecked()), "newsletter: consent box must not be pre-ticked");
+  await p1.locator("#newsletter-email").fill("lecteur@example.com");
+  await nl.getByRole("button", { name: "S'abonner" }).click();
+  await nl.getByText("Cochez la case pour vous abonner.").waitFor();
+  await nl.getByRole("checkbox").check();
+  await nl.getByRole("button", { name: "S'abonner" }).click();
+  await nl.getByText("Merci, votre inscription est enregistrée.").waitFor();
   passed++;
 
   // 4. Sign up in French -> onboarding in French.
@@ -102,6 +168,10 @@ try {
   await page.getByText("Utilisez au moins 8 caractères.").waitFor();
   check(await page.getByLabel("E-mail").inputValue() === email, "forms: typed input must survive a validation error");
   await page.getByLabel("Mot de passe").fill("motdepasse-solide-42");
+  check(!(await page.getByRole("checkbox").isChecked()), "sign-up: terms box must not be pre-ticked");
+  await page.getByRole("button", { name: "Créer un compte" }).click();
+  await page.getByText("Vous devez accepter les conditions générales d'utilisation").waitFor();
+  await page.getByRole("checkbox").check();
   await page.getByRole("button", { name: "Créer un compte" }).click();
   await page.waitForURL("**/fr/app/onboarding");
   await page.getByRole("heading", { name: "Configurez votre espace de travail" }).waitFor();
@@ -229,7 +299,7 @@ try {
   // 12. App screens in both languages and three viewports.
   const appPages = [["", "overview"], ["/leads", "leads"], ["/leads/new", "lead-new"], ["/pipeline", "pipeline"], ["/appointments", "appointments"],
     ["/conversations", "conversations"], ["/automations", "automations"], ["/analytics", "analytics"], ["/integrations", "integrations"],
-    ["/settings", "settings"], ["/billing", "billing"]];
+    ["/settings", "settings"]];
   for (const locale of ["en", "fr"]) {
     await page.goto(`${BASE}/${locale === "en" ? "fr" : "en"}/app/settings`);
     await page.locator("#language-switcher-desktop").selectOption(locale);

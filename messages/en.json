@@ -35,10 +35,11 @@
     "faq": "FAQ",
     "contact": "Contact",
     "signIn": "Sign in",
-    "signUp": "Get started",
+    "signUp": "Request a quote",
     "openApp": "Open the app",
     "mainNav": "Main navigation",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "book": "Book a call"
   },
   "Footer": {
     "tagline": "Intelligent business systems to turn more opportunities into customers.",
@@ -46,15 +47,26 @@
     "productNav": "Product links",
     "company": "Company",
     "language": "Language",
-    "copyright": "© {year} SAVAN"
+    "copyright": "© {year} SAVAN",
+    "legal": "Legal",
+    "legalNav": "Legal information",
+    "legalNotice": "Legal notice",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "termsOfSale": "Terms of sale",
+    "termsOfUse": "Terms of use",
+    "accessibility": "Accessibility: partially compliant",
+    "manageCookies": "Manage cookies",
+    "whatsapp": "WhatsApp",
+    "mediator": "Consumer mediation: {name}"
   },
   "Home": {
     "hero": {
       "eyebrow": "Intelligent Business Systems",
       "title": "Turn more opportunities into customers with intelligent lead conversion systems.",
       "subtitle": "SAVAN brings your leads, conversations, appointments and follow-ups together, with an AI assistant that writes in your prospect's language — in English or French.",
-      "primaryCta": "Create your account",
-      "secondaryCta": "Talk to us"
+      "primaryCta": "Request a quote",
+      "secondaryCta": "Book a call"
     },
     "benefits": {
       "title": "Everything you need to follow up every lead",
@@ -92,41 +104,27 @@
     },
     "cta": {
       "title": "Ready to convert more of your leads?",
-      "text": "Set up your workspace in a few minutes, in English or French.",
-      "primary": "Get started",
+      "text": "Tell us about your business: we design your acquisition system with you and send you a written quote.",
+      "primary": "Request a quote",
       "secondary": "See industries"
     }
   },
   "Pricing": {
     "title": "Pricing",
-    "subtitle": "Simple monthly plans. Cancel anytime from your account.",
-    "perMonth": "/ month",
-    "taxNote": "Excluding applicable taxes.",
-    "recommended": "Recommended",
-    "choose": "Choose {plan}",
-    "questions": "Questions about plans? <link>Contact us</link>.",
-    "plans": {
-      "starter": {
-        "name": "Starter",
-        "description": "For independent professionals getting organized.",
-        "features": {
-          "f1": "Lead management and pipeline",
-          "f2": "Appointments",
-          "f3": "Bilingual message templates",
-          "f4": "Email support"
-        }
-      },
-      "growth": {
-        "name": "Growth",
-        "description": "For teams that want to automate their follow-ups.",
-        "features": {
-          "f1": "Everything in Starter",
-          "f2": "Automations with approval",
-          "f3": "AI assistant: replies, summaries, translation",
-          "f4": "Analytics by stage and source"
-        }
-      }
-    }
+    "subtitle": "Every business is different. We design your acquisition system with you and quote it before any commitment.",
+    "includedTitle": "What a project can include",
+    "included": {
+      "f1": "An audit of how you currently handle enquiries",
+      "f2": "Setting up SAVAN: pipeline, bilingual templates, automations",
+      "f3": "Training for your team",
+      "f4": "Follow-up and adjustments, as set out in your quote"
+    },
+    "howTitle": "How the price is set",
+    "how": "The price depends on the scope of your project. You receive a detailed written quote before any work starts. Prices for consumers are shown including all taxes.",
+    "payment": "Payment on invoice, by bank transfer or PayPal.",
+    "requestQuote": "Request a quote",
+    "bookCall": "Book a call",
+    "terms": "Our services are provided under our <link>terms of sale</link>."
   },
   "Industries": {
     "title": "Industries",
@@ -184,12 +182,12 @@
         "answer": "Each workspace is isolated: only its members can access its leads and conversations. Prospect details are stored exactly as entered and are never translated automatically."
       },
       "billing": {
-        "question": "How does billing work?",
-        "answer": "Plans are billed monthly. Payments are processed by Stripe."
+        "question": "How is the price set?",
+        "answer": "Each project is quoted individually after a first discussion. You receive a written quote before any commitment and pay on invoice, by bank transfer or PayPal."
       },
       "cancel": {
-        "question": "Can I cancel at any time?",
-        "answer": "Yes. You can cancel from the Subscription page of your account. Your plan stays active until the end of the current billing period."
+        "question": "Can I change my mind after ordering?",
+        "answer": "If you are a consumer, you have 14 days to withdraw, under the conditions set out in our terms of sale. For professional customers, the conditions are set out in the quote and our terms of sale."
       },
       "integrations": {
         "question": "Does SAVAN connect to my email or calendar?",
@@ -198,8 +196,8 @@
     }
   },
   "Contact": {
-    "title": "Contact us",
-    "subtitle": "Questions about SAVAN? Send us a message and we will reply by email.",
+    "title": "Contact us or request a quote",
+    "subtitle": "Tell us about your business and your needs. We will reply by email.",
     "form": {
       "fullName": "Full name",
       "email": "Email",
@@ -208,8 +206,11 @@
       "submit": "Send message",
       "sending": "Sending…",
       "success": "Thank you, your message has been sent. We will reply by email.",
-      "dataNotice": "We use these details only to answer your message."
-    }
+      "dataNotice": "We use these details only to answer your request and, if relevant, prepare a quote. See our <link>privacy policy</link>.",
+      "termsNotice": "Our services are provided under our <link>terms of sale</link>.",
+      "requiredNote": "Fields marked with * are required."
+    },
+    "whatsapp": "Prefer instant messaging? <link>Write to us on WhatsApp</link>."
   },
   "Validation": {
     "required": "This field is required.",
@@ -219,7 +220,9 @@
     "passwordTooShort": "Use at least 8 characters.",
     "invalidNumber": "Enter a valid amount, for example 1500.50.",
     "invalidDate": "Enter a valid date and time.",
-    "invalidChoice": "Choose a valid option."
+    "invalidChoice": "Choose a valid option.",
+    "termsRequired": "You must accept the terms of use to create an account.",
+    "consentRequired": "Tick the box to subscribe."
   },
   "Errors": {
     "generic": "Something went wrong. Please try again.",
@@ -253,7 +256,9 @@
     "signingUp": "Creating account…",
     "noAccount": "No account yet?",
     "haveAccount": "Already have an account?",
-    "checkEmail": "Check your inbox: we sent you a link to confirm your email address."
+    "checkEmail": "Check your inbox: we sent you a link to confirm your email address.",
+    "acceptTerms": "I have read and accept the <terms>terms of use</terms> and the <privacy>privacy policy</privacy>.",
+    "accountNotice": "Your details are used to create and manage your SAVAN account."
   },
   "Onboarding": {
     "title": "Set up your workspace",
@@ -282,8 +287,7 @@
     "automations": "Automations",
     "analytics": "Analytics",
     "integrations": "Integrations",
-    "settings": "Settings",
-    "billing": "Subscription"
+    "settings": "Settings"
   },
   "AppShell": {
     "interfaceLanguage": "Interface language",
@@ -650,30 +654,79 @@
     "saved": "Settings saved.",
     "adminOnly": "Only workspace owners and admins can change these settings."
   },
-  "Billing": {
-    "title": "Subscription",
-    "subtitle": "Manage your SAVAN plan.",
-    "currentPlan": "Current plan",
-    "noPlan": "You don't have an active subscription.",
-    "status": "Status",
-    "statuses": {
-      "active": "Active",
-      "trialing": "Trial",
-      "past_due": "Payment overdue",
-      "canceled": "Canceled",
-      "incomplete": "Incomplete",
-      "incomplete_expired": "Expired",
-      "unpaid": "Unpaid",
-      "paused": "Paused"
+  "Consent": {
+    "title": "Your cookie choices",
+    "text": "With our partners, we would like to use cookies and similar technologies to measure our audience, show you relevant ads, and display videos, appointment booking and chat. Some partners are located outside the European Union. You can accept everything, refuse everything or choose by purpose. Refusing has no effect on your access to the site, and you can change your mind at any time with “Manage cookies” at the bottom of each page.",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "customize": "Choose by purpose",
+    "save": "Save my choices",
+    "policyLink": "Cookie policy and list of partners",
+    "alwaysOn": "Always active",
+    "allow": "Allow",
+    "categories": {
+      "necessary": {
+        "title": "Strictly necessary",
+        "text": "Sign-in, security, language choice and the storage of your cookie choices."
+      },
+      "analytics": {
+        "title": "Audience measurement",
+        "text": "Google Analytics: pages visited and how the site is used, to improve it."
+      },
+      "advertising": {
+        "title": "Advertising",
+        "text": "Meta, Google Ads, LinkedIn and TikTok: measure our campaigns and show you our ads on their platforms."
+      },
+      "media": {
+        "title": "Videos and appointment booking",
+        "text": "YouTube videos and the Calendly booking calendar."
+      },
+      "chat": {
+        "title": "Live chat",
+        "text": "The Tawk.to chat window to talk with our team."
+      }
+    }
+  },
+  "Embed": {
+    "blockedTitle": "Content blocked",
+    "youtube": "This video is hosted by YouTube (Google), which sets cookies. It only loads if you allow “Videos and appointment booking”.",
+    "calendly": "The booking calendar is provided by Calendly, which sets cookies. It only loads if you allow “Videos and appointment booking”.",
+    "allow": "Allow and load",
+    "openDirect": "Open on {site} instead (new tab)"
+  },
+  "Book": {
+    "title": "Book a call",
+    "subtitle": "Choose a time for a first discussion about your project.",
+    "notConfigured": "Online booking is not available yet. <link>Contact us</link> and we will suggest a time.",
+    "preferEmail": "Prefer email? <link>Contact us</link>."
+  },
+  "Newsletter": {
+    "title": "Newsletter",
+    "text": "News about SAVAN and practical advice on lead conversion.",
+    "email": "Email",
+    "consent": "I agree to receive the SAVAN newsletter by email. I can unsubscribe at any time using the link in each email.",
+    "submit": "Subscribe",
+    "submitting": "Subscribing…",
+    "success": "Thank you, your subscription is recorded.",
+    "notice": "Your email is used only to send the newsletter. <link>Privacy policy</link>",
+    "unsubscribeTitle": "Unsubscribe from the newsletter",
+    "unsubscribeText": "Confirm below to stop receiving the newsletter.",
+    "unsubscribeButton": "Unsubscribe",
+    "unsubscribed": "You have been unsubscribed. You will no longer receive our newsletter.",
+    "invalidLink": "This unsubscribe link is invalid. Contact us and we will remove your address."
+  },
+  "Legal": {
+    "updated": "Last updated: {date}",
+    "todo": "TO BE COMPLETED",
+    "toc": "Contents",
+    "titles": {
+      "legalNotice": "Legal notice",
+      "privacy": "Privacy policy",
+      "cookies": "Cookie policy",
+      "termsOfSale": "Terms of sale",
+      "termsOfUse": "Terms of use",
+      "accessibility": "Accessibility statement"
     },
-    "renewsOn": "Renews on {date}",
-    "endsOn": "Ends on {date}",
-    "manage": "Manage billing",
-    "subscribe": "Subscribe to {plan}",
-    "redirecting": "Redirecting…",
-    "success": "Thank you! Your subscription is being activated.",
-    "canceledCheckout": "Checkout canceled. You have not been charged.",
-    "ownerOnly": "Only the workspace owner or an admin can manage billing.",
-    "securePayment": "Payments are processed securely by Stripe."
+    "manageCookies": "Change my cookie choices"
   }
 }

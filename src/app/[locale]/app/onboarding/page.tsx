@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { Suspense } from "react";
 import type { Locale } from "@/i18n/config";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { LegalLinks } from "@/components/legal-links";
 import { Card } from "@/components/ui";
 import { getWorkspace } from "@/lib/context";
 import { OnboardingForm } from "./onboarding-form";
@@ -33,6 +34,9 @@ export default async function OnboardingPage({ params }: PageProps<"/[locale]/ap
           <OnboardingForm />
         </Card>
       </main>
+      <footer className="mx-auto max-w-2xl px-4 pb-8">
+        <LegalLinks />
+      </footer>
     </div>
   );
 }

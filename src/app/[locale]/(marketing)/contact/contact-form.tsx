@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { useActionState } from "react";
+import { Link } from "@/i18n/navigation";
 import { DirtyForm } from "@/components/dirty-form";
 import { Alert, Button, Field, Input, Textarea } from "@/components/ui";
 import type { FormState } from "@/lib/forms";
@@ -23,6 +24,7 @@ export function ContactForm() {
   return (
     <DirtyForm action={action} noValidate className="space-y-4">
       {state.error ? <Alert>{te(state.error)}</Alert> : null}
+      <p className="text-sm text-ink-600">{t("requiredNote")}</p>
       <input type="hidden" name="locale" value={locale} />
       <Field id="fullName" label={t("fullName")} error={err("fullName")} required requiredLabel={tc("required")}>
         {(aria) => <Input {...aria} name="fullName" autoComplete="name" maxLength={200} />}
@@ -36,7 +38,12 @@ export function ContactForm() {
       <Field id="message" label={t("message")} error={err("message")} required requiredLabel={tc("required")}>
         {(aria) => <Textarea {...aria} name="message" rows={5} maxLength={5000} />}
       </Field>
-      <p className="text-xs text-ink-600">{t("dataNotice")}</p>
+      <p className="text-xs text-ink-600">
+        {t.rich("dataNotice", { link: (chunks) => <Link href="/legal/privacy" className="underline">{chunks}</Link> })}
+      </p>
+      <p className="text-xs text-ink-600">
+        {t.rich("termsNotice", { link: (chunks) => <Link href="/legal/terms-of-sale" className="underline">{chunks}</Link> })}
+      </p>
       <Button type="submit" disabled={pending}>
         {pending ? t("sending") : t("submit")}
       </Button>

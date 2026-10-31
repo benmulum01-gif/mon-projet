@@ -35,10 +35,11 @@
     "faq": "FAQ",
     "contact": "Contact",
     "signIn": "Connexion",
-    "signUp": "Commencer",
+    "signUp": "Demander un devis",
     "openApp": "Ouvrir l'application",
     "mainNav": "Navigation principale",
-    "skipToContent": "Aller au contenu"
+    "skipToContent": "Aller au contenu",
+    "book": "Prendre rendez-vous"
   },
   "Footer": {
     "tagline": "Des systèmes intelligents pour transformer davantage d'opportunités en clients.",
@@ -46,15 +47,26 @@
     "productNav": "Liens produit",
     "company": "Entreprise",
     "language": "Langue",
-    "copyright": "© {year} SAVAN"
+    "copyright": "© {year} SAVAN",
+    "legal": "Informations légales",
+    "legalNav": "Informations légales",
+    "legalNotice": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "cookies": "Politique de cookies",
+    "termsOfSale": "Conditions générales de vente",
+    "termsOfUse": "Conditions générales d'utilisation",
+    "accessibility": "Accessibilité : partiellement conforme",
+    "manageCookies": "Gérer mes cookies",
+    "whatsapp": "WhatsApp",
+    "mediator": "Médiation de la consommation : {name}"
   },
   "Home": {
     "hero": {
       "eyebrow": "Des systèmes intelligents pour les entreprises",
       "title": "Transformez davantage d'opportunités en clients grâce à des systèmes intelligents de conversion des prospects.",
       "subtitle": "SAVAN réunit vos prospects, conversations, rendez-vous et relances, avec un assistant IA qui écrit dans la langue de votre prospect — en français ou en anglais.",
-      "primaryCta": "Créer votre compte",
-      "secondaryCta": "Nous contacter"
+      "primaryCta": "Demander un devis",
+      "secondaryCta": "Prendre rendez-vous"
     },
     "benefits": {
       "title": "Tout pour ne laisser filer aucun prospect",
@@ -92,41 +104,27 @@
     },
     "cta": {
       "title": "Prêt à convertir davantage de prospects ?",
-      "text": "Configurez votre espace de travail en quelques minutes, en français ou en anglais.",
-      "primary": "Commencer",
+      "text": "Présentez-nous votre activité : nous concevons avec vous votre système d'acquisition et vous envoyons un devis écrit.",
+      "primary": "Demander un devis",
       "secondary": "Voir les secteurs"
     }
   },
   "Pricing": {
     "title": "Tarifs",
-    "subtitle": "Des formules mensuelles simples, résiliables à tout moment depuis votre compte.",
-    "perMonth": "/ mois",
-    "taxNote": "Hors taxes applicables.",
-    "recommended": "Recommandé",
-    "choose": "Choisir {plan}",
-    "questions": "Des questions sur les formules ? <link>Contactez-nous</link>.",
-    "plans": {
-      "starter": {
-        "name": "Essentiel",
-        "description": "Pour les indépendants qui veulent s'organiser.",
-        "features": {
-          "f1": "Gestion des prospects et pipeline commercial",
-          "f2": "Rendez-vous",
-          "f3": "Modèles de messages bilingues",
-          "f4": "Assistance par e-mail"
-        }
-      },
-      "growth": {
-        "name": "Croissance",
-        "description": "Pour les équipes qui veulent automatiser leurs relances.",
-        "features": {
-          "f1": "Tout le contenu de la formule Essentiel",
-          "f2": "Automatisations avec validation",
-          "f3": "Assistant IA : réponses, résumés, traduction",
-          "f4": "Analyses par étape et par source"
-        }
-      }
-    }
+    "subtitle": "Chaque entreprise est différente. Nous concevons votre système d'acquisition avec vous et le chiffrons avant tout engagement.",
+    "includedTitle": "Ce qu'une prestation peut comprendre",
+    "included": {
+      "f1": "Un audit de votre gestion actuelle des demandes",
+      "f2": "La mise en place de SAVAN : pipeline, modèles bilingues, automatisations",
+      "f3": "La formation de votre équipe",
+      "f4": "Un suivi et des ajustements, selon les termes de votre devis"
+    },
+    "howTitle": "Comment le prix est établi",
+    "how": "Le prix dépend du périmètre de votre projet. Vous recevez un devis écrit et détaillé avant tout démarrage. Les prix proposés aux particuliers sont indiqués toutes taxes comprises.",
+    "payment": "Paiement sur facture, par virement ou PayPal.",
+    "requestQuote": "Demander un devis",
+    "bookCall": "Prendre rendez-vous",
+    "terms": "Nos prestations sont soumises à nos <link>conditions générales de vente</link>."
   },
   "Industries": {
     "title": "Secteurs",
@@ -184,12 +182,12 @@
         "answer": "Chaque espace de travail est cloisonné : seuls ses membres peuvent accéder à ses prospects et à ses conversations. Les coordonnées des prospects sont conservées telles que saisies et ne sont jamais traduites automatiquement."
       },
       "billing": {
-        "question": "Comment fonctionne la facturation ?",
-        "answer": "Les formules sont facturées chaque mois. Les paiements sont traités par Stripe."
+        "question": "Comment le prix est-il fixé ?",
+        "answer": "Chaque projet fait l'objet d'un devis individuel après un premier échange. Vous recevez un devis écrit avant tout engagement et vous payez sur facture, par virement ou PayPal."
       },
       "cancel": {
-        "question": "Puis-je résilier à tout moment ?",
-        "answer": "Oui. Vous pouvez résilier depuis la page Abonnement de votre compte. Votre formule reste active jusqu'à la fin de la période de facturation en cours."
+        "question": "Puis-je changer d'avis après avoir commandé ?",
+        "answer": "Si vous êtes un particulier, vous disposez de 14 jours pour vous rétracter, dans les conditions prévues par nos conditions générales de vente. Pour les professionnels, les conditions sont fixées dans le devis et nos conditions générales de vente."
       },
       "integrations": {
         "question": "SAVAN se connecte-t-il à ma messagerie ou à mon agenda ?",
@@ -198,8 +196,8 @@
     }
   },
   "Contact": {
-    "title": "Nous contacter",
-    "subtitle": "Une question sur SAVAN ? Envoyez-nous un message, nous vous répondrons par e-mail.",
+    "title": "Nous contacter ou demander un devis",
+    "subtitle": "Présentez-nous votre activité et vos besoins. Nous vous répondrons par e-mail.",
     "form": {
       "fullName": "Nom complet",
       "email": "E-mail",
@@ -208,8 +206,11 @@
       "submit": "Envoyer le message",
       "sending": "Envoi…",
       "success": "Merci, votre message a bien été envoyé. Nous vous répondrons par e-mail.",
-      "dataNotice": "Nous utilisons ces informations uniquement pour répondre à votre message."
-    }
+      "dataNotice": "Nous utilisons ces informations uniquement pour répondre à votre demande et, le cas échéant, préparer un devis. Voir notre <link>politique de confidentialité</link>.",
+      "termsNotice": "Nos prestations sont soumises à nos <link>conditions générales de vente</link>.",
+      "requiredNote": "Les champs marqués d'un * sont obligatoires."
+    },
+    "whatsapp": "Vous préférez la messagerie instantanée ? <link>Écrivez-nous sur WhatsApp</link>."
   },
   "Validation": {
     "required": "Ce champ est obligatoire.",
@@ -219,7 +220,9 @@
     "passwordTooShort": "Utilisez au moins 8 caractères.",
     "invalidNumber": "Saisissez un montant valide, par exemple 1500,50.",
     "invalidDate": "Saisissez une date et une heure valides.",
-    "invalidChoice": "Choisissez une option valide."
+    "invalidChoice": "Choisissez une option valide.",
+    "termsRequired": "Vous devez accepter les conditions générales d'utilisation pour créer un compte.",
+    "consentRequired": "Cochez la case pour vous abonner."
   },
   "Errors": {
     "generic": "Une erreur est survenue. Veuillez réessayer.",
@@ -253,7 +256,9 @@
     "signingUp": "Création du compte…",
     "noAccount": "Pas encore de compte ?",
     "haveAccount": "Vous avez déjà un compte ?",
-    "checkEmail": "Consultez votre boîte de réception : nous vous avons envoyé un lien pour confirmer votre adresse e-mail."
+    "checkEmail": "Consultez votre boîte de réception : nous vous avons envoyé un lien pour confirmer votre adresse e-mail.",
+    "acceptTerms": "J'ai lu et j'accepte les <terms>conditions générales d'utilisation</terms> et la <privacy>politique de confidentialité</privacy>.",
+    "accountNotice": "Vos informations servent à créer et à gérer votre compte SAVAN."
   },
   "Onboarding": {
     "title": "Configurez votre espace de travail",
@@ -282,8 +287,7 @@
     "automations": "Automatisations",
     "analytics": "Analyses",
     "integrations": "Intégrations",
-    "settings": "Paramètres",
-    "billing": "Abonnement"
+    "settings": "Paramètres"
   },
   "AppShell": {
     "interfaceLanguage": "Langue de l'interface",
@@ -650,30 +654,79 @@
     "saved": "Paramètres enregistrés.",
     "adminOnly": "Seuls les propriétaires et administrateurs de l'espace peuvent modifier ces réglages."
   },
-  "Billing": {
-    "title": "Abonnement",
-    "subtitle": "Gérez votre formule SAVAN.",
-    "currentPlan": "Formule actuelle",
-    "noPlan": "Vous n'avez pas d'abonnement actif.",
-    "status": "Statut",
-    "statuses": {
-      "active": "Actif",
-      "trialing": "Essai",
-      "past_due": "Paiement en retard",
-      "canceled": "Résilié",
-      "incomplete": "Incomplet",
-      "incomplete_expired": "Expiré",
-      "unpaid": "Impayé",
-      "paused": "Suspendu"
+  "Consent": {
+    "title": "Vos choix en matière de cookies",
+    "text": "Avec nos partenaires, nous souhaitons utiliser des cookies et technologies similaires pour mesurer l'audience, vous montrer des publicités pertinentes et afficher des vidéos, la prise de rendez-vous et le chat. Certains partenaires sont situés hors de l'Union européenne. Vous pouvez tout accepter, tout refuser ou choisir par finalité. Refuser n'a aucune conséquence sur votre accès au site et vous pouvez changer d'avis à tout moment via « Gérer mes cookies » en bas de chaque page.",
+    "acceptAll": "Tout accepter",
+    "rejectAll": "Tout refuser",
+    "customize": "Choisir par finalité",
+    "save": "Enregistrer mes choix",
+    "policyLink": "Politique de cookies et liste des partenaires",
+    "alwaysOn": "Toujours actifs",
+    "allow": "Autoriser",
+    "categories": {
+      "necessary": {
+        "title": "Strictement nécessaires",
+        "text": "Connexion, sécurité, choix de la langue et conservation de vos choix en matière de cookies."
+      },
+      "analytics": {
+        "title": "Mesure d'audience",
+        "text": "Google Analytics : pages consultées et utilisation du site, pour l'améliorer."
+      },
+      "advertising": {
+        "title": "Publicité",
+        "text": "Meta, Google Ads, LinkedIn et TikTok : mesurer nos campagnes et vous montrer nos publicités sur leurs plateformes."
+      },
+      "media": {
+        "title": "Vidéos et prise de rendez-vous",
+        "text": "Vidéos YouTube et calendrier de réservation Calendly."
+      },
+      "chat": {
+        "title": "Discussion en direct",
+        "text": "La fenêtre de discussion Tawk.to pour échanger avec notre équipe."
+      }
+    }
+  },
+  "Embed": {
+    "blockedTitle": "Contenu bloqué",
+    "youtube": "Cette vidéo est hébergée par YouTube (Google), qui dépose des cookies. Elle ne se charge que si vous autorisez « Vidéos et prise de rendez-vous ».",
+    "calendly": "Le calendrier de réservation est fourni par Calendly, qui dépose des cookies. Il ne se charge que si vous autorisez « Vidéos et prise de rendez-vous ».",
+    "allow": "Autoriser et afficher",
+    "openDirect": "Ouvrir directement sur {site} (nouvel onglet)"
+  },
+  "Book": {
+    "title": "Prendre rendez-vous",
+    "subtitle": "Choisissez un créneau pour un premier échange sur votre projet.",
+    "notConfigured": "La réservation en ligne n'est pas encore disponible. <link>Contactez-nous</link> et nous vous proposerons un créneau.",
+    "preferEmail": "Vous préférez l'e-mail ? <link>Contactez-nous</link>."
+  },
+  "Newsletter": {
+    "title": "Lettre d'information",
+    "text": "Actualités de SAVAN et conseils pratiques sur la conversion des prospects.",
+    "email": "E-mail",
+    "consent": "J'accepte de recevoir la lettre d'information de SAVAN par e-mail. Je peux me désinscrire à tout moment grâce au lien présent dans chaque e-mail.",
+    "submit": "S'abonner",
+    "submitting": "Inscription…",
+    "success": "Merci, votre inscription est enregistrée.",
+    "notice": "Votre e-mail sert uniquement à l'envoi de la lettre d'information. <link>Politique de confidentialité</link>",
+    "unsubscribeTitle": "Se désinscrire de la lettre d'information",
+    "unsubscribeText": "Confirmez ci-dessous pour ne plus recevoir la lettre d'information.",
+    "unsubscribeButton": "Me désinscrire",
+    "unsubscribed": "Votre désinscription est enregistrée. Vous ne recevrez plus notre lettre d'information.",
+    "invalidLink": "Ce lien de désinscription n'est pas valide. Contactez-nous et nous supprimerons votre adresse."
+  },
+  "Legal": {
+    "updated": "Dernière mise à jour : {date}",
+    "todo": "À COMPLÉTER",
+    "toc": "Sommaire",
+    "titles": {
+      "legalNotice": "Mentions légales",
+      "privacy": "Politique de confidentialité",
+      "cookies": "Politique de cookies",
+      "termsOfSale": "Conditions générales de vente",
+      "termsOfUse": "Conditions générales d'utilisation",
+      "accessibility": "Déclaration d'accessibilité"
     },
-    "renewsOn": "Renouvellement le {date}",
-    "endsOn": "Prend fin le {date}",
-    "manage": "Gérer la facturation",
-    "subscribe": "Souscrire à la formule {plan}",
-    "redirecting": "Redirection…",
-    "success": "Merci ! Votre abonnement est en cours d'activation.",
-    "canceledCheckout": "Paiement annulé. Aucun montant n'a été débité.",
-    "ownerOnly": "Seul le propriétaire ou un administrateur de l'espace peut gérer la facturation.",
-    "securePayment": "Les paiements sont traités de manière sécurisée par Stripe."
+    "manageCookies": "Modifier mes choix de cookies"
   }
 }

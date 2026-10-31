@@ -3,12 +3,12 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { buttonClass } from "@/components/ui";
 import type { Locale } from "@/i18n/config";
-import { alternates } from "@/lib/seo";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/industries">): Promise<Metadata> {
   const locale = (await params).locale as Locale;
   const t = await getTranslations({ locale, namespace: "Industries" });
-  return { title: t("title"), description: t("subtitle"), alternates: alternates(locale, "/industries") };
+  return pageMetadata(locale, "/industries", t("title"), t("subtitle"));
 }
 
 const industries = ["homeServices", "realEstate", "wellness", "professionalServices", "education", "agencies"] as const;

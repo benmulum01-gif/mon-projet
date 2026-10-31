@@ -257,16 +257,36 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
-                },"profiles": {
+                },"newsletter_subscribers": {
                   Row: {
-                    "created_at": string,"full_name": string | null,"id": string,"ui_locale": string | null,"updated_at": string
+                    "consent_version": string,"consented_at": string,"email": string,"id": string,"locale": string,"unsubscribe_token": string,"unsubscribed_at": string | null
                   }
                   ComputedFields: never
                   Insert: {
-                    "created_at"?: string,"full_name"?: string | null,"id": string,"ui_locale"?: string | null,"updated_at"?: string
+                    "consent_version": string,"consented_at"?: string,"email": string,"id"?: string,"locale": string,"unsubscribe_token"?: string,"unsubscribed_at"?: string | null
                   }
                   Update: {
-                    "created_at"?: string,"full_name"?: string | null,"id"?: string,"ui_locale"?: string | null,"updated_at"?: string
+                    "consent_version"?: string,"consented_at"?: string,"email"?: string,"id"?: string,"locale"?: string,"unsubscribe_token"?: string,"unsubscribed_at"?: string | null
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "newsletter_subscribers_locale_fkey"
+      columns: ["locale"]
+isOneToOne: false
+      referencedRelation: "locales"
+      referencedColumns: ["code"]
+    }
+                  ]
+                },"profiles": {
+                  Row: {
+                    "created_at": string,"full_name": string | null,"id": string,"terms_accepted_at": string | null,"terms_version": string | null,"ui_locale": string | null,"updated_at": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"full_name"?: string | null,"id": string,"terms_accepted_at"?: string | null,"terms_version"?: string | null,"ui_locale"?: string | null,"updated_at"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"full_name"?: string | null,"id"?: string,"terms_accepted_at"?: string | null,"terms_version"?: string | null,"ui_locale"?: string | null,"updated_at"?: string
                   }
                   Relationships: [
                     {
@@ -275,26 +295,6 @@ isOneToOne: false
 isOneToOne: false
       referencedRelation: "locales"
       referencedColumns: ["code"]
-    }
-                  ]
-                },"subscriptions": {
-                  Row: {
-                    "cancel_at_period_end": boolean,"current_period_end": string | null,"plan": string | null,"status": string | null,"stripe_customer_id": string | null,"stripe_subscription_id": string | null,"updated_at": string,"workspace_id": string
-                  }
-                  ComputedFields: never
-                  Insert: {
-                    "cancel_at_period_end"?: boolean,"current_period_end"?: string | null,"plan"?: string | null,"status"?: string | null,"stripe_customer_id"?: string | null,"stripe_subscription_id"?: string | null,"updated_at"?: string,"workspace_id": string
-                  }
-                  Update: {
-                    "cancel_at_period_end"?: boolean,"current_period_end"?: string | null,"plan"?: string | null,"status"?: string | null,"stripe_customer_id"?: string | null,"stripe_subscription_id"?: string | null,"updated_at"?: string,"workspace_id"?: string
-                  }
-                  Relationships: [
-                    {
-      foreignKeyName: "subscriptions_workspace_id_fkey"
-      columns: ["workspace_id"]
-isOneToOne: true
-      referencedRelation: "workspaces"
-      referencedColumns: ["id"]
     }
                   ]
                 },"template_variants": {
@@ -390,8 +390,17 @@ isOneToOne: false
 "is_workspace_member":
 { Args: { "ws": string }; Returns: boolean
                            },
+"purge_expired_data":
+{ Args: Record<PropertyKey, never>; Returns: undefined
+                           },
+"subscribe_newsletter":
+{ Args: { "p_consent_version": string,"p_email": string,"p_locale": string }; Returns: undefined
+                           },
 "template_missing_locales":
 { Args: { "p_template": string }; Returns: (string)[]
+                           },
+"unsubscribe_newsletter":
+{ Args: { "p_token": string }; Returns: boolean
                            }
           }
           Enums: {

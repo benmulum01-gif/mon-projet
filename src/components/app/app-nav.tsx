@@ -14,7 +14,6 @@ export const appNavItems = [
   { href: "/app/analytics", key: "analytics" },
   { href: "/app/integrations", key: "integrations" },
   { href: "/app/settings", key: "settings" },
-  { href: "/app/billing", key: "billing" },
 ] as const;
 
 export function AppNav() {

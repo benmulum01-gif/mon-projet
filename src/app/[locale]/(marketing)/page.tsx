@@ -3,12 +3,14 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { buttonClass } from "@/components/ui";
 import type { Locale } from "@/i18n/config";
-import { alternates } from "@/lib/seo";
+import { pageMetadata } from "@/lib/seo";
+import { company } from "@/config/company";
+import { env } from "@/lib/env";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
   const locale = (await params).locale as Locale;
   const t = await getTranslations({ locale, namespace: "Meta" });
-  return { title: { absolute: t("homeTitle") }, description: t("description"), alternates: alternates(locale, "/") };
+  return pageMetadata(locale, "/", t("homeTitle"), t("description"), true);
 }
 
 const benefits = ["respond", "organize", "follow", "measure"] as const;
@@ -18,9 +20,37 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
   const t = await getTranslations("Home");
+  const meta = await getTranslations("Meta");
+  // Structured data for search engines and AI assistants.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${env.siteUrl}/#organization`,
+        name: company.brand,
+        ...(company.legalName ? { legalName: company.legalName } : {}),
+        url: env.siteUrl,
+        ...(company.email ? { email: company.email } : {}),
+        address: { "@type": "PostalAddress", addressCountry: "CD", ...(company.address ? { streetAddress: company.address } : {}) },
+      },
+      {
+        "@type": "ProfessionalService",
+        name: company.brand,
+        description: meta("description"),
+        url: `${env.siteUrl}/${locale}`,
+        inLanguage: locale,
+        provider: { "@id": `${env.siteUrl}/#organization` },
+        areaServed: "Europe",
+        availableLanguage: ["en", "fr"],
+        priceRange: "Sur devis / On quote",
+      },
+    ],
+  };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <section className="bg-gradient-to-b from-brand-50 to-white">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
           <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">{t("hero.eyebrow")}</p>
@@ -29,10 +59,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-ink-700">{t("hero.subtitle")}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/sign-up" className={buttonClass("primary", "px-6 py-3 text-base")}>
+            <Link href="/contact" className={buttonClass("primary", "px-6 py-3 text-base")}>
               {t("hero.primaryCta")}
             </Link>
-            <Link href="/contact" className={buttonClass("secondary", "px-6 py-3 text-base")}>
+            <Link href="/book" className={buttonClass("secondary", "px-6 py-3 text-base")}>
               {t("hero.secondaryCta")}
             </Link>
           </div>
@@ -77,7 +107,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           <h2 id="cta-title" className="text-2xl font-bold sm:text-3xl">{t("cta.title")}</h2>
           <p className="mt-3 max-w-2xl text-brand-50">{t("cta.text")}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/sign-up" className={buttonClass("secondary")}>
+            <Link href="/contact" className={buttonClass("secondary")}>
               {t("cta.primary")}
             </Link>
             <Link href="/industries" className="inline-flex min-h-10 items-center px-2 font-semibold text-white underline underline-offset-4">

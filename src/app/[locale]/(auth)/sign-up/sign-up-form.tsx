@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { useActionState } from "react";
+import { Link } from "@/i18n/navigation";
 import { DirtyForm } from "@/components/dirty-form";
 import { Alert, Button, Field, Input } from "@/components/ui";
 import type { FormState } from "@/lib/forms";
@@ -31,6 +32,29 @@ export function SignUpForm() {
       <Field id="password" label={t("password")} help={t("passwordHint")} error={err("password")} required requiredLabel={tc("required")}>
         {(aria) => <Input {...aria} name="password" type="password" autoComplete="new-password" minLength={8} maxLength={72} />}
       </Field>
+      <div>
+        <label className="flex items-start gap-2 text-sm text-ink-700">
+          {/* Not pre-ticked: acceptance must be an explicit action. */}
+          <input
+            type="checkbox"
+            name="acceptTerms"
+            value="yes"
+            required
+            className="mt-0.5 size-4 shrink-0"
+            aria-invalid={err("acceptTerms") ? true : undefined}
+            aria-describedby={err("acceptTerms") ? "acceptTerms-error" : undefined}
+          />
+          <span>
+            {t.rich("acceptTerms", {
+              terms: (chunks) => <Link href="/legal/terms-of-use" target="_blank" className="font-semibold text-brand-700 underline">{chunks}</Link>,
+              privacy: (chunks) => <Link href="/legal/privacy" target="_blank" className="font-semibold text-brand-700 underline">{chunks}</Link>,
+            })}
+            <span className="text-red-700" aria-hidden="true"> *</span>
+          </span>
+        </label>
+        {err("acceptTerms") ? <p id="acceptTerms-error" className="mt-1 text-sm text-red-700">{err("acceptTerms")}</p> : null}
+      </div>
+      <p className="text-xs text-ink-600">{t("accountNotice")}</p>
       <Button type="submit" disabled={pending} className="w-full">
         {pending ? t("signingUp") : t("signUp")}
       </Button>

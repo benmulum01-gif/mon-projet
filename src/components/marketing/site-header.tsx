@@ -51,7 +51,7 @@ export async function SiteHeader() {
               <Link href="/sign-in" className={buttonClass("ghost")}>
                 {t("signIn")}
               </Link>
-              <Link href="/sign-up" className={buttonClass("primary")}>
+              <Link href="/contact" className={buttonClass("primary")}>
                 {t("signUp")}
               </Link>
             </>

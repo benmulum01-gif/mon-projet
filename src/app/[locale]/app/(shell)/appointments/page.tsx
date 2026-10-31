@@ -31,7 +31,7 @@ export default async function AppointmentsPage({ searchParams }: PageProps<"/[lo
     <Card>
       <h2 className="mb-3 text-lg font-semibold">{title}</h2>
       {rows.length ? (
-        <div className="relative overflow-x-auto">
+        <div className="relative overflow-x-auto" tabIndex={0} role="region" aria-label={title}>
           <table className="w-full min-w-[640px] text-left text-sm">
             <thead className="text-ink-700">
               <tr>{(["when", "lead", "duration", "location", "status"] as const).map((c) => <th key={c} scope="col" className="py-2 pr-4 font-semibold">{t(`columns.${c}`)}</th>)}</tr>

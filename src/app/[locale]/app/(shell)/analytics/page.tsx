@@ -32,9 +32,9 @@ export default async function AnalyticsPage() {
     <>
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
       <dl className="mb-6 grid gap-4 sm:grid-cols-3">
-        <Card className="p-4"><dt className="text-sm text-ink-600">{t("conversion")}</dt><dd className="mt-1 text-2xl font-bold">{closed ? formatPercent(won.length / closed, ctx.fmt) : "—"}</dd></Card>
-        <Card className="p-4"><dt className="text-sm text-ink-600">{t("closed")}</dt><dd className="mt-1 text-2xl font-bold">{formatNumber(closed, ctx.fmt)}</dd></Card>
-        <Card className="p-4"><dt className="text-sm text-ink-600">{t("wonValue")}</dt><dd className="mt-1 text-2xl font-bold">{formatMoney(won.reduce((s, l) => s + (l.value_cents ?? 0), 0), ctx.fmt)}</dd></Card>
+        <div className="rounded-lg border border-line bg-white p-4"><dt className="text-sm text-ink-600">{t("conversion")}</dt><dd className="mt-1 text-2xl font-bold">{closed ? formatPercent(won.length / closed, ctx.fmt) : "—"}</dd></div>
+        <div className="rounded-lg border border-line bg-white p-4"><dt className="text-sm text-ink-600">{t("closed")}</dt><dd className="mt-1 text-2xl font-bold">{formatNumber(closed, ctx.fmt)}</dd></div>
+        <div className="rounded-lg border border-line bg-white p-4"><dt className="text-sm text-ink-600">{t("wonValue")}</dt><dd className="mt-1 text-2xl font-bold">{formatMoney(won.reduce((s, l) => s + (l.value_cents ?? 0), 0), ctx.fmt)}</dd></div>
       </dl>
       {!total ? (
         <p className="text-ink-600">{t("noData")}</p>

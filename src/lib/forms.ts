@@ -13,7 +13,9 @@ export type ValidationCode =
   | "passwordTooShort"
   | "invalidNumber"
   | "invalidDate"
-  | "invalidChoice";
+  | "invalidChoice"
+  | "termsRequired"
+  | "consentRequired";
 
 export type ErrorCode =
   | "generic"

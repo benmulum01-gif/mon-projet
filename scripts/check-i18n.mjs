@@ -28,7 +28,7 @@ const SAME_ALLOWED = new Set([
   "Conversations.composer.body", "Conversations.composer.type", "Automations.editor.body", "Appointments.columns.when",
   "Appointments.form.notes", "Appointments.minutes", "Analytics.source", "Integrations.items.messaging.title",
   "Leads.detail.messagesCount", "Automations.active", "Automations.inactive", "Automations.automationsTitle",
-  "Leads.detail.conversations",
+  "Leads.detail.conversations", "Footer.whatsapp",
 ]);
 
 const placeholders = (s) => [...String(s).matchAll(/\{(\w+)[,}]|<(\w+)>/g)].map((m) => m[1] ?? `<${m[2]}>`).sort().join("|");

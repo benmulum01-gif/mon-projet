@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { LegalLinks } from "@/components/legal-links";
 
 export default function AuthLayout({ children }: LayoutProps<"/[locale]">) {
   return (
@@ -16,6 +17,9 @@ export default function AuthLayout({ children }: LayoutProps<"/[locale]">) {
       <main id="main" className="mx-auto w-full max-w-md flex-1 px-4 pb-16">
         {children}
       </main>
+      <footer className="mx-auto w-full max-w-md px-4 pb-8">
+        <LegalLinks />
+      </footer>
     </div>
   );
 }

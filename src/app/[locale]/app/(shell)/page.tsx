@@ -46,11 +46,11 @@ export default async function OverviewPage() {
       <PageHeader title={t("title")} subtitle={t("subtitle")} actions={<Link href="/app/leads/new" className={buttonClass()}>{t("addLead")}</Link>} />
       <dl className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {metrics.map((m) => (
-          <Card key={m.key} className="p-4">
+          <div key={m.key} className="rounded-lg border border-line bg-white p-4">
             <dt className="text-sm text-ink-600">{t(`metrics.${m.key}`)}</dt>
             <dd className="mt-1 text-2xl font-bold text-ink-900">{m.value}</dd>
             {"help" in m ? <dd className="mt-1 text-xs text-ink-600">{m.help}</dd> : null}
-          </Card>
+          </div>
         ))}
       </dl>
       {(pending.count ?? 0) > 0 ? (

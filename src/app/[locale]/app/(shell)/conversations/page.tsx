@@ -30,7 +30,7 @@ export default async function ConversationsPage() {
       {!data?.length ? (
         <EmptyState title={t("emptyTitle")} text={t("emptyText")} action={<Link href="/app/leads" className={buttonClass("secondary")}>{(await getTranslations("AppNav"))("leads")}</Link>} />
       ) : (
-        <div className="relative overflow-x-auto rounded-lg border border-line bg-white">
+        <div className="relative overflow-x-auto rounded-lg border border-line bg-white" tabIndex={0} role="region" aria-label={t("title")}>
           <table className="w-full min-w-[640px] text-left text-sm">
             <thead className="bg-surface text-ink-700">
               <tr>{(["lead", "channel", "language", "messages", "started"] as const).map((c) => <th key={c} scope="col" className="px-4 py-2 font-semibold">{t(`columns.${c}`)}</th>)}</tr>
