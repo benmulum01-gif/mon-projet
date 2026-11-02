@@ -15,7 +15,9 @@
     "check": "npm run typecheck && npm run lint && npm run check:i18n && npm run test",
     "db:types": "supabase gen types typescript --local > src/lib/supabase/types.ts",
     "build:e2e": "NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST000 NEXT_PUBLIC_GOOGLE_ADS_ID=AW-TEST000 NEXT_PUBLIC_META_PIXEL_ID=1234567890 NEXT_PUBLIC_LINKEDIN_PARTNER_ID=123456 NEXT_PUBLIC_TIKTOK_PIXEL_ID=TESTPIXEL NEXT_PUBLIC_TAWK_PROPERTY_ID=test-property NEXT_PUBLIC_CALENDLY_URL=https://calendly.com/savan-test/30min NEXT_PUBLIC_WHATSAPP_NUMBER=243000000000 next build",
-    "check:legal": "node scripts/check-legal.mjs"
+    "check:legal": "node scripts/check-legal.mjs",
+    "preview:zip": "node scripts/build-preview.mjs",
+    "preview": "rm -rf tests/e2e/screenshots && npm run build:e2e && (npm start > /tmp/savan-preview-server.log 2>&1 & sleep 8 && npm run test:e2e; status=$?; pkill -f '[n]ext start'; exit $status) && npm run preview:zip"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.3.0",

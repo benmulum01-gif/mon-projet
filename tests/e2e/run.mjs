@@ -88,6 +88,13 @@ try {
   await vp.goto(`${BASE}/fr`);
   const banner = vp.getByRole("dialog", { name: "Vos choix en matière de cookies" });
   await banner.waitFor();
+  for (const [vpName, size] of Object.entries(viewports)) {
+    await vp.setViewportSize(size);
+    await vp.screenshot({ path: join(shots, `consent-banner-fr-${vpName}.png`) });
+  }
+  await vp.setViewportSize(viewports.desktop);
+  await banner.getByRole("button", { name: "Choisir par finalité" }).click();
+  await vp.screenshot({ path: join(shots, "consent-details-fr-desktop.png") });
   check(thirdParty.length === 0, `consent: trackers loaded before consent: ${thirdParty.slice(0, 2).join(", ")}`);
   const reject = banner.getByRole("button", { name: "Tout refuser" });
   const accept = banner.getByRole("button", { name: "Tout accepter" });
